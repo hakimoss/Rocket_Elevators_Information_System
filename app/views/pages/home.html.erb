@@ -70,8 +70,8 @@
 
 						<li data-transition="parallaxtobottom" data-slotamount="7" data-masterspeed="600"  data-saveperformance="off"  data-title="Modern Elevator">
 							<!-- MAIN IMAGE -->
-							<img src="./assets/image/AdobeStock_33298664.jpeg"  alt="cover image"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
-				
+							<%# <img src="./assets/image/AdobeStock_33298664.jpeg"  alt="cover image"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> %>
+							<%= image_tag("AdobeStock_33298664.jpeg", data:{bgposition: "center top", bgfit: "cover" , bgrepeat: "no-repeat"}) %>
 
 							<div class="tp-caption white_big skewfromleft tp-resizeme"
 								data-x="200"
@@ -144,8 +144,8 @@
 						<!-- SLIDE  -->
 						<li data-transition="parallaxtotop" data-slotamount="7" data-masterspeed="300"  data-saveperformance="off" data-title="Residential elevator">
 							<!-- MAIN IMAGE -->
-							<img src="./assets/image/Residential-Elevator.jpg" alt="cover image"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
-
+							<%# <img src="./assets/image/Residential-Elevator.jpg" alt="cover image"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> %>
+							<%= image_tag("Residential-Elevator.jpg", data:{bgposition: "center top", bgfit: "cover" , bgrepeat: "no-repeat"}) %>
 							<div class="overlay dark-4"><!-- dark overlay [0 to 9 opacity] --></div>
 
 							<div class="tp-caption font-roboto skewfromleft tp-resizeme"
@@ -198,7 +198,7 @@
 						<li data-transition="parallaxtotop" data-slotamount="7" data-masterspeed="300"  data-saveperformance="off" data-title="Corporate Building">
 							<!-- MAIN IMAGE -->
 							<img src="./assets/image/AdobeStock_179073967.jpeg" alt="cover image"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
-
+							<%= image_tag("AdobeStock_179073967.jpeg", data:{bgposition: "center top", bgfit: "cover" , bgrepeat: "no-repeat"}) %>
 							<div class="overlay dark-4"><!-- dark overlay [0 to 9 opacity] --></div>
 
 							<div class="tp-caption font-roboto skewfromleft tp-resizeme"
@@ -612,6 +612,7 @@
 
 												<!-- lightbox -->
 												<a class="ico-rounded lightbox" href="./assets/image/Residential-Elevator.jpg" data-plugin-options='{"type":"image"}'>
+													<%# <%= link_to image_tag("Residential-Elevator.jpg") %>
 													<span class="fa fa-plus fs-20"></span>
 												</a>
 											</span>
@@ -1280,18 +1281,3 @@
 
 
 			
-
-		</div>
-		<!-- /wrapper -->
-
-
-		<!-- SCROLL TO TOP -->
-		<a href="#" id="toTop"></a>
-
-
-		<!-- PRELOADER -->
-		<div id="preloader">
-			<div class="inner">
-				<span class="loader"></span>
-			</div>
-		</div><!-- /PRELOADER -->
