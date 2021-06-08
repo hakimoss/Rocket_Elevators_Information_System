@@ -11,10 +11,12 @@
 #
 default: &default
   adapter: mysql2
-  encoding: utf8
+  database: Rocket_Elevators_Information_System_development
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
   password: Hakima_1990
+  host: localhost
+  port: 3300
   socket: /var/run/mysqld/mysqld.sock
 
 development:
@@ -49,6 +51,12 @@ test:
 #
 production:
   <<: *default
+  encoding: utf8
   database: Rocket_Elevators_Information_System_production
+  database: <%= ENV['RDS_DB_NAME'] %>
+  username: <%= ENV['RDS_USERNAME'] %>
+  password: <%= ENV['RDS_PASSWORD'] %>
+  host: <%= ENV['RDS_HOSTNAME'] %>
+  port: <%= ENV['RDS_PORT'] %>
   username: Rocket_Elevators_Information_System
   password: <%= ENV['ROCKET_ELEVATORS_INFORMATION_SYSTEM_DATABASE_PASSWORD'] %>
