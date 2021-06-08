@@ -1,0 +1,363 @@
+<!-- wrapper -->
+		<div id="wrapper">
+
+			<!-- 
+				AVAILABLE HEADER CLASSES
+
+				Default nav height: 96px
+				.header-md 		= 70px nav height
+				.header-sm 		= 60px nav height
+
+				.b-0 		= remove bottom border (only with transparent use)
+				.transparent	= transparent header
+				.translucent	= translucent header
+				.sticky			= sticky header
+				.static			= static header
+				.dark			= dark header
+				.bottom			= header on bottom
+				
+				shadow-before-1 = shadow 1 header top
+				shadow-after-1 	= shadow 1 header bottom
+				shadow-before-2 = shadow 2 header top
+				shadow-after-2 	= shadow 2 header bottom
+				shadow-before-3 = shadow 3 header top
+				shadow-after-3 	= shadow 3 header bottom
+
+				.clearfix		= required for mobile menu, do not remove!
+
+				Example Usage:  class="clearfix sticky header-sm transparent b-0"
+			-->
+			<div id="header" class="navbar-toggleable-md sticky header-md clearfix">
+
+				<!-- TOP NAV -->
+				<header id="topNav">
+					<div class="container">
+
+						<!-- Mobile Menu Button -->
+						<button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+							<i class="fa fa-bars"></i>
+						</button>
+
+						<!-- Logo -->
+						<a class="logo float-left scrollTo" href="#top">
+							<img src="./assets/image/R2.png" alt="" />
+						</a>
+
+						<!-- 
+							Top Nav 
+							
+							AVAILABLE CLASSES:
+							submenu-dark = dark sub menu
+						-->
+						<div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
+							<nav class="nav-main">
+
+								<!-- 
+									.nav-onepage
+									Required for onepage navigation links
+									
+									Add .external for an external link!
+								-->
+								<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
+									<li class="active"><!-- HOME -->
+										<a id="home-nav" href="index.html">
+											HOME
+										</a>
+									</li>
+									<li class="nav-item dropdown"><!-- SERVICES -->
+										<a class="nav-link dropdown-toggle" href="index.html#services" data-bs-toggle="dropdown" style="display: flex; align-items: center;">SERVICES </a>
+										 <ul class="dropdown-menu bg-white" style="border: none;">
+										   <li><a class="dropdown-item" href="./residential.html" style="color: black;" >RESIDENTIAL</a></li>
+										   <li><a class="dropdown-item" href="./commercial.html" style="color: black;" >COMMERCIAL</a></li>
+										   <li><a class="dropdown-item" href="./quote.html" style="color: black;" >GET QUOTE</a></li>
+										 </ul>
+									 </li>
+									<li><!-- PORTFOLIO -->
+										<a id="portfolio-nav" href="index.html#portfolio">
+											PORTFOLIO
+										</a>
+									</li>
+									<li><!-- NEWS -->
+										<a id="news-nav" href="index.html#news">
+											NEWS
+										</a>
+									</li>
+									<li><!-- CLIENTS -->
+										<a id="clients-nav" href="index.html#clients">
+											CLIENTS
+										</a>
+									</li>
+									<li><!-- CONTACT -->
+										<a id="contact-nav" href="index.html#contact">
+											CONTACT
+										</a>
+									</li>
+								</ul>
+
+							</nav>
+						</div>
+
+					</div>
+				</header>
+				<!-- /Top Nav -->
+
+			</div>
+
+
+
+			<hr class="m-0" /><!-- 1px line separator -->
+
+
+			<!-- BUTTON CALLOUT -->
+			<a href="./index.html#contact" class="btn btn-xlg btn-danger	 fs-20 fullwidth m-0 rad-0 p-40">
+				<span class="font-lato fs-30">
+					Did Rocket Elevator convinced you? 
+					<strong>Contact us &raquo;</strong>
+				</span>
+			</a>
+			<!-- /BUTTON CALLOUT -->
+
+		
+						<!-- FORM -->
+						<div class="col-md-10 col-sm-4" style="margin: 100px 8%;">
+
+							<h3 style="text-align: center;">A Work Faithful To The Wait</h3>
+
+							
+							<!--
+								MESSAGES
+								
+									How it works?
+									The form data is posted to php/contact.php where the fields are verified!
+									php.contact.php will redirect back here and will add a hash to the end of the URL:
+										#alert_success 		= email sent
+										#alert_failed		= email not sent - internal server error (404 error or SMTP problem)
+										#alert_mandatory	= email not sent - required fields empty
+										Hashes are handled by assets/js/contact.js
+
+									Form data: required to be an array. Example:
+										contact[email][required]  WHERE: [email] = field name, [required] = only if this field is required (PHP will check this)
+										Also, add `required` to input fields if is a mandatory field. 
+										Example: <input required type="email" value="" class="form-control" name="contact[email][required]">
+
+									PLEASE NOTE: IF YOU WANT TO ADD OR REMOVE FIELDS (EXCEPT CAPTCHA), JUST EDIT THE HTML CODE, NO NEED TO EDIT php/contact.php or javascript
+												 ALL FIELDS ARE DETECTED DINAMICALY BY THE PHP
+
+									WARNING! Do not change the `email` and `name`!
+												contact[name][required] 	- should stay as it is because PHP is using it for AddReplyTo (phpmailer)
+												contact[email][required] 	- should stay as it is because PHP is using it for AddReplyTo (phpmailer)
+							-->
+
+							<!-- Alert Success -->
+							<div id="alert_success" class="alert alert-success mb-30">
+								<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+								<strong>Thank You!</strong> Your message successfully sent!
+							</div><!-- /Alert Success -->
+
+
+							<!-- Alert Failed -->
+							<div id="alert_failed" class="alert alert-danger mb-30">
+								<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+								<strong>[SMTP] Error!</strong> Internal server error!
+							</div><!-- /Alert Failed -->
+
+
+							<!-- Alert Mandatory -->
+							<div id="alert_mandatory" class="alert alert-danger mb-30">
+								<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+								<strong>Sorry!</strong> You need to complete all mandatory (*) fields!
+							</div><!-- /Alert Mandatory -->
+
+
+
+							
+							<!-- FORM QUOTE -->
+							
+							<form action="/quote" method="post" enctype="multipart/form-data">
+								<fieldset>
+									<input type="hidden" name="action" value="contact_send" />
+
+									<div class="row">
+										<div class="col-md-12">
+											<label for="contact_department">Department</label>
+											<select id="building-type" class="form-control pointer" name="contact[department]">
+												<option value="">--- Select ---</option>
+												<option value="residential">Residential</option>
+												<option value="commercial">Commercial</option>
+												<option value="corporate">Corporate</option>
+												<option value="hybrid">Hybrid</option>
+											</select>
+										</div>
+									</div>
+
+							<!-- FORM RESIDENTIAL -->
+									<div id="residential" class="building_type row" >
+
+											<div id="number-of-apartments" class="col-md-4">
+												<label for="residentialApp">N. of Appartements *</label>
+												<input required type="number" value="0" class="form-control" name="residentialCalc[resApp]" id="residentialApp" min="0">
+											</div>
+											<div id="number-of-floors" class="col-md-4">
+												<label for="residentialFloor">N. of Floor *</label>
+												<input required type="number" value="0" class="form-control" name="residentialCalc[resFloor]" id="residentialFloor" min="0">
+											</div>
+											<div id="number-of-basements" class="col-md-4">
+												<label for="residentialBasement">N. of Basements *</label>
+												<input required type="number" value="0" class="form-control" name="residentialCalc[resBasement]" id="residentialBasement" min="0">
+											</div>
+									 </div>
+							<!-- FORM RESIDENTIAL -->	
+							
+							<!-- FORM COMMERCIAL -->
+									<div id="commercial" class="building_type" >
+										<div class="row">
+
+											<div id="number-of-companies" class="col-md-4">
+												<label for="commercialCompagnies">N. of Compagnies *</label>
+												<input required type="number" value="0" class="form-control" name="N.compagnies[name][required]" id="commercialCompagnies" min="0">
+											</div>
+											<div id="number-of-floors" class="col-md-4">
+												<label for="commercialFloor">N. of Floor *</label>
+												<input required type="number" value="0" class="form-control" name="N.floor[name][required]" id="commercialFloor" min="0">
+											</div>
+											<div id="number-of-basements" class="col-md-4">
+												<label for="commercialBasements">N. of Basements *</label>
+												<input required type="number" value="0" class="form-control" name="N.basements[name][required]" id="commercialBasements" min="0">
+											</div>
+										</div>
+										<div class="row">
+											<div id="number-of-parking-spots" class="col-md-6">
+												<label for="commercialParking">N. of Parking Spots *</label>
+												<input required type="number" value="0" class="form-control" name="N.parking[name][required]" id="commercialParking" min="0">
+											</div>
+											<div id="number-of-elevators" class="col-md-6">
+												<label for="commercialElevator">N. of Elevator Cages *</label>
+												<input required type="number" value="0" class="form-control" name="N.cages[name][required]" id="commercialElevator" min="0">
+											</div>
+										</div>
+									 </div>
+							<!-- FORM COMMERCIAL -->
+
+							<!-- FORM CORPORATE -->
+									<div id="corporate" class="building_type" >
+										<div class="row">
+
+											<div id="number-of-corporations" class="col-md-4">
+												<label for="corporateCorporations">N. of Corporate *</label>
+												<input required type="number" value="0" class="form-control" name="N.corporate[name][required]" id="corporateCorporations" min="0">
+											</div>
+											<div id="number-of-floors" class="corporateChanger col-md-4">
+												<label for="corporateFloor">N. of Floor *</label>
+												<input required type="number" value="0" class="form-control" name="N.floor[name][required]" id="corporateFloor" min="0">
+											</div>
+											<div id="number-of-basements" class="corporateChanger col-md-4">
+												<label for="corporateBasements">N. of Basements *</label>
+												<input required type="number" value="0" class="form-control" name="N.basements[name][required]" id="corporateBasements" min="0">
+											</div>
+										</div>
+										<div class="row">
+											<div id="number-of-parking-spots" class="col-md-6">
+												<label for="corporateParking">N. of Parking Spots *</label>
+												<input required type="number" value="0" class="form-control" name="N.parking[name][required]" id="corporateParking" min="0">
+											</div>
+											<div id="maximum-occupancy" class="corporateChanger col-md-6">
+												<label for="corporateOccupancy">N. of Occupancy by stage *</label>
+												<input required type="number" value="0" class="form-control" name="N.occupancy[name][required]" id="corporateOccupancy" min="0">
+											</div>
+										</div>
+									 </div>
+							<!-- FORM CORPORATE -->
+							
+							<!-- FORM HYBRID -->
+									<div id="hybrid" class="building_type" >
+										<div class="row">
+
+											<div id="number-of-companies" class="col-md-4">
+												<label for="hybridCompanies">N. of Companies *</label>
+												<input required type="number" value="0" class="form-control" name="N.companies[name][required]" id="hybridCompanies" min="0">
+											</div>
+											<div id="number-of-floors" class="hybridChanger col-md-4">
+												<label for="hybridFloor">N. of Floor *</label>
+												<input required type="number" value="0" class="form-control" name="N.floor[name][required]" id="hybridFloor" min="0">
+											</div>
+											<div id="number-of-basements" class="hybridChanger col-md-4">
+												<label for="hybridBasements">N. of Basements *</label>
+												<input required type="number" value="0" class="form-control" name="N.basements[name][required]" id="hybridBasements" min="0">
+											</div>
+										</div>
+										<div class="row">
+											<div id="number-of-parking-spots" class="col-md-4">
+												<label for="hybridParking">N. of Parking Spots *</label>
+												<input required type="number" value="0" class="form-control" name="N.parking[name][required]" id="hybridParking" min="0">
+											</div>
+											<div id="maximum-occupancy" class="hybridChanger col-md-4">
+												<label for="hybridOccupancy">N. of Occupancy by Stage *</label>
+												<input required type="number" value="0" class="form-control" name="N.occupancy[name][required]" id="hybridOccupancy" min="0">
+											</div>
+											<div id="business-hours" class="col-md-4">
+												<label for="hybridHour">N. of Hours of Building Activity *</label>
+												<input required type="number" value="0" class="form-control" name="N.hour[name][required]" id="hybridHour" max="24" min="0">
+											</div>
+										</div>
+									 </div>
+								</fieldset>
+							<!-- FORM HYBRID -->
+
+							<!-- FORM RADIO BUTTON -->
+
+									<div style="margin-top: 50px;" class="priceShow">
+										Number of elevator shafts required : <span id="elevatorShafts">0</span>
+									</div>
+
+
+							<div id="building-prices" class="priceShow"> 
+								<div class="row" style="margin-top: 100px;">
+									<div class="col-md-4" style="display: flex; flex-direction: column; align-items: center;">
+										<label for="standard">Standard</label>
+										<input type="radio" id="standard" name="variety" value="standard">
+									</div>
+									<div class="col-md-4" style="display: flex; flex-direction: column; align-items: center;">
+										<label for="premium">Premium</label>
+										<input type="radio" id="premium" name="variety" value="premium">
+									</div>
+									<div class="col-md-4" style="display: flex; flex-direction: column; align-items: center;">
+										<label for="excelium">Excelium</label>
+										<input type="radio" id="excelium" name="variety" value="excelium">
+									</div>
+								</div>
+							<!-- FORM RADIO BUTTON -->
+
+							<!-- FORM RADIO VALUE -->
+
+								<div class="row" style="margin-top: 130px;">
+									<div id="elevator-amount" class="col-md-4" style="display: flex; flex-direction: column; align-items: center;">
+										<label for="elevatorAmount">N. of Elevator</label>
+										<input type="number" id="elevatorAmount" name="price" value="0" readonly>
+									</div>
+									<div id="elevator-unit-price" class="col-md-4" style="display: flex; flex-direction: column; align-items: center;">
+										<label for="elevatorUnitPrice">Elevator Unit Price</label>
+										<input type="text" id="elevatorUnitPrice" name="price" value="0" readonly>
+									</div>
+									<div id="elevator-total-price" class="col-md-4" style="display: flex; flex-direction: column; align-items: center;">
+										<label for="elevatorTotalPrice">Elevator Total Price</label>
+										<input type="text" id="elevatorTotalPrice" name="price" value="0" readonly>
+									</div>
+								</div>
+								<div class="row">
+									<div id="installation-fees" class="col-md-4" style="display: flex; flex-direction: column; align-items: center;">
+										<label for="installationFees">Installation Fees</label>
+										<input type="text" id="installationFees" name="price" value="0" readonly>
+									</div>
+									<div id="final-price" class="col-md-4" style="display: flex; flex-direction: column; align-items: center;">
+										<label for="finalPrice">Final Price</label>
+										<input type="text" id="finalPrice" name="price" value="0" readonly>
+									</div>
+								</div>
+							</div>
+								
+							</form>
+						</div>
+							<!-- FORM RADIO VALUE -->
+					
+
+						<!-- FORM QUOTE -->
