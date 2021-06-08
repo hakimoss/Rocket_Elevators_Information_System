@@ -14,3 +14,5 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+require("plugins/jquery/jquery-3.3.1.min.js").start()

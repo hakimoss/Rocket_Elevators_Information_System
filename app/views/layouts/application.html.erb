@@ -13,13 +13,14 @@
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700" rel="stylesheet" type="text/css" />
 
 		<!-- CORE CSS -->
-		<link href="app/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		<%# <link href="app/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" /> %>
 		<%# <link href="./app/assets/stylesheets/style.css" rel="stylesheet" type="text/css" /> %>
+		
 		
 
 		<!-- REVOLUTION SLIDER -->
-		<link href="app/assets/plugins/slider.revolution/css/extralayers.css" rel="stylesheet" type="text/css" />
-		<link href="app/assets/plugins/slider.revolution/css/settings.css" rel="stylesheet" type="text/css" />
+		<%# <link href="app/assets/plugins/slider.revolution/css/extralayers.css" rel="stylesheet" type="text/css" /> %>
+		<%# <link href="app/assets/plugins/slider.revolution/css/settings.css" rel="stylesheet" type="text/css" /> %>
 
 		<!-- THEME CSS -->
 		<%# <link href="app/assets/stylesheets/essentials.css" rel="stylesheet" type="text/css" />
@@ -36,7 +37,7 @@
   </head>
 
 
-  <body>
+  <body class="smoothscroll enable-animation">
 
 	
 			<div id="header" class="navbar-toggleable-md sticky header-md clearfix">
@@ -183,30 +184,50 @@
 					</div>
 				</div>
 
+		
 			</footer>
 			<!-- /FOOTER -->
 
-			<!-- JAVASCRIPT FILES -->
-					<script>var plugin_path = 'assets/plugins/';</script>
-					<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
-					<script src="assets/js/quote.js"></script>
-					<script src="assets/js/scripts.js"></script>
-					
-					
+		</div>
+		<!-- /wrapper -->
 
-					<!-- REVOLUTION SLIDER -->
-					<script src="assets/plugins/slider.revolution/js/jquery.themepunch.tools.min.js"></script>
-					<script src="assets/plugins/slider.revolution/js/jquery.themepunch.revolution.min.js"></script>
-					<script src="assets/js/view/demo.revolution_slider.js"></script>
 
-					<!-- PAGELEVEL SCRIPTS -->
-					<script src="assets/js/contact.js"></script>
+		<!-- SCROLL TO TOP -->
+		<a href="#" id="toTop"></a>
 
-					<!-- 
-						GMAP.JS 
-						http://hpneo.github.io/gmaps/
-					-->
-					<script src="//maps.google.com/maps/api/js?key=AIzaSyCqCn84CgZN6o1Xc3P4dM657HIxkX3jzPY"></script>
-					<script src="assets/plugins/gmaps.js"></script>
+
+		<!-- PRELOADER -->
+		<div id="preloader">
+			<div class="inner">
+				<span class="loader"></span>
+			</div>
+		</div><!-- /PRELOADER -->
+
+
+		<!-- JAVASCRIPT FILES -->
+		<script>var plugin_path = 'assets/plugins/';</script>
+	<%#	<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script> %>
+		<script src="assets/js/quote.js"></script>
+		<script src="assets/js/scripts.js"></script>
+
+		<%= javascript_include_tag 'application.js' %> 
+		
+
+		<!-- REVOLUTION SLIDER -->
+		<script src="assets/plugins/slider.revolution/js/jquery.themepunch.tools.min.js"></script>
+		<script src="assets/plugins/slider.revolution/js/jquery.themepunch.revolution.min.js"></script>
+		<script src="assets/js/view/demo.revolution_slider.js"></script>
+
+		<!-- PAGELEVEL SCRIPTS -->
+		<script src="assets/js/contact.js"></script>
+
+		<!-- 
+			GMAP.JS 
+			http://hpneo.github.io/gmaps/
+		-->
+		<script src="//maps.google.com/maps/api/js?key=AIzaSyCqCn84CgZN6o1Xc3P4dM657HIxkX3jzPY"></script>
+		<script src="assets/plugins/gmaps.js"></script>
+
+
   </body>
 </html>
