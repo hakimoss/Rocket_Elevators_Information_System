@@ -28,6 +28,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'bootsnap', '>=1.4.2', require: false
 # Use ActiveStorage variant
+gem 'webpacker', '~> 3.5'
 # gem 'mini_magick', '~> 4.8'
 
 # Use Capistrano for deployment
