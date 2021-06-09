@@ -10,7 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_08_194512) do
+ActiveRecord::Schema.define(version: 2021_06_09_174718) do
+
+  create_table "quotes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "type_building"
+    t.integer "number_appartement"
+    t.integer "number_floor"
+    t.integer "number_basement"
+    t.integer "number_compagny"
+    t.integer "number_parking"
+    t.integer "number_elevator"
+    t.integer "number_corporate"
+    t.integer "max_occupancy"
+    t.integer "business_hour"
+    t.string "ele_standard"
+    t.string "ele_premium"
+    t.string "ele_excelium"
+    t.integer "ele_amount"
+    t.integer "ele_price_unit"
+    t.integer "ele_total_price"
+    t.integer "inst_fee"
+    t.integer "final_price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
