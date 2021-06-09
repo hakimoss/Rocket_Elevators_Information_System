@@ -8,7 +8,14 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-    
+    		<!-- mobile settings -->
+		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+		<%# <link rel="icon" href="./assets/image/icon-page.png"> %>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		
+
     <!-- WEB FONTS : use %7C instead of | (pipe) -->
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700" rel="stylesheet" type="text/css" />
 
@@ -16,7 +23,7 @@
 		<%# <link href="app/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" /> %>
 		<%# <link href="./app/assets/stylesheets/style.css" rel="stylesheet" type="text/css" /> %>
 		
-		
+	
 
 		<!-- REVOLUTION SLIDER -->
 		<%# <link href="app/assets/plugins/slider.revolution/css/extralayers.css" rel="stylesheet" type="text/css" /> %>
@@ -25,13 +32,15 @@
 		<!-- THEME CSS -->
 		<%# <link href="app/assets/stylesheets/essentials.css" rel="stylesheet" type="text/css" />
 		<link href="app/assets/stylesheets/layout.css" rel="stylesheet" type="text/css" /> %>
-	
 		<%= stylesheet_link_tag "application" %>
+		
+		<%= javascript_include_tag 'application.js' %> 
+
+		
 
 		<!-- PAGE LEVEL SCRIPTS -->
 		<%# <link href="app/assets/stylesheets/header-1.css" rel="stylesheet" type="text/css" />
 		<link href="app/assets/stylesheets/color_scheme/blue.css" rel="stylesheet" type="text/css" id="color_scheme" /> %>
-	
 
 
   </head>
@@ -40,6 +49,37 @@
   <body class="smoothscroll enable-animation">
 
 	
+			<!-- wrapper -->
+		<div id="wrapper">
+
+			<!-- 
+				AVAILABLE HEADER CLASSES
+
+				Default nav height: 96px
+				.header-md 		= 70px nav height
+				.header-sm 		= 60px nav height
+
+				.b-0 		= remove bottom border (only with transparent use)
+				.transparent	= transparent header
+				.translucent	= translucent header
+				.sticky			= sticky header
+				.static			= static header
+				.dark			= dark header
+				.bottom			= header on bottom
+				
+				shadow-before-1 = shadow 1 header top
+				shadow-after-1 	= shadow 1 header bottom
+				shadow-before-2 = shadow 2 header top
+				shadow-after-2 	= shadow 2 header bottom
+				shadow-before-3 = shadow 3 header top
+				shadow-after-3 	= shadow 3 header bottom
+
+				.clearfix		= required for mobile menu, do not remove!
+
+				Example Usage:  class="clearfix sticky header-sm transparent b-0"
+			-->
+
+			
 			<div id="header" class="navbar-toggleable-md sticky header-md clearfix">
 
 				<!-- TOP NAV -->
@@ -55,9 +95,7 @@
 
 							<!-- Logo -->
 							<a class="logo float-left scrollTo" href="#top">
-								<%# <img src="/app/assets/images/R2.png" alt="" /> %>
-								<%= image_tag("R2.png") %>
-                                
+								<img src="./assets/image/R2.png" alt="" />
 							</a>
 
 							<!-- 
@@ -123,39 +161,6 @@
 				<!-- /Top Nav -->
 
 			</div>
-
-			<!-- wrapper -->
-		<div id="wrapper">
-
-			<!-- 
-				AVAILABLE HEADER CLASSES
-
-				Default nav height: 96px
-				.header-md 		= 70px nav height
-				.header-sm 		= 60px nav height
-
-				.b-0 		= remove bottom border (only with transparent use)
-				.transparent	= transparent header
-				.translucent	= translucent header
-				.sticky			= sticky header
-				.static			= static header
-				.dark			= dark header
-				.bottom			= header on bottom
-				
-				shadow-before-1 = shadow 1 header top
-				shadow-after-1 	= shadow 1 header bottom
-				shadow-before-2 = shadow 2 header top
-				shadow-after-2 	= shadow 2 header bottom
-				shadow-before-3 = shadow 3 header top
-				shadow-after-3 	= shadow 3 header bottom
-
-				.clearfix		= required for mobile menu, do not remove!
-
-				Example Usage:  class="clearfix sticky header-sm transparent b-0"
-			-->
-			<div id="header" class="navbar-toggleable-md sticky header-md clearfix">
-
-				<!-- TOP NAV -->
 
     <%= yield %>
 
@@ -244,7 +249,7 @@
 		<%# <script src="assets/js/quote.js"></script> %>
 		<%# <script src="assets/js/scripts.js"></script> %>
 
-		<%= javascript_include_tag 'application.js' %> 
+		
 		
 
 		<!-- REVOLUTION SLIDER -->
