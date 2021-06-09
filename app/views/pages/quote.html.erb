@@ -87,21 +87,22 @@
 									</div>
 
 							<!-- FORM RESIDENTIAL -->
-									<div id="residential" class="building_type row" >
-
-											<div id="number-of-apartments" class="col-md-4">
-												<label for="residentialApp">N. of Appartements *</label>
-												<input required type="number" value="0" class="form-control" name="residentialCalc[resApp]" id="residentialApp" min="0">
-											</div>
-											<div id="number-of-floors" class="col-md-4">
-												<label for="residentialFloor">N. of Floor *</label>
-												<input required type="number" value="0" class="form-control" name="residentialCalc[resFloor]" id="residentialFloor" min="0">
-											</div>
-											<div id="number-of-basements" class="col-md-4">
-												<label for="residentialBasement">N. of Basements *</label>
-												<input required type="number" value="0" class="form-control" name="residentialCalc[resBasement]" id="residentialBasement" min="0">
-											</div>
-									 </div>
+									
+										<div id="residential" class="building_type row" >
+												<div id="number-of-apartments" class="col-md-4">
+													<%= content_tag :div, '', id: 'residentialApp', data: { source: @residentialApp } %>
+													<label for="residentialApp">N. of Appartements *</label>
+													<input required type="number" value="0" class="form-control" name="residentialCalc[resApp]" id="residentialApp" min="0">
+												</div>
+												<div id="number-of-floors" class="col-md-4">
+													<label for="residentialFloor">N. of Floor *</label>
+													<input required type="number" value="0" class="form-control" name="residentialCalc[resFloor]" id="residentialFloor" min="0">
+												</div>
+												<div id="number-of-basements" class="col-md-4">
+													<label for="residentialBasement">N. of Basements *</label>
+													<input required type="number" value="0" class="form-control" name="residentialCalc[resBasement]" id="residentialBasement" min="0">
+												</div>
+										</div>
 							<!-- FORM RESIDENTIAL -->	
 							
 							<!-- FORM COMMERCIAL -->
