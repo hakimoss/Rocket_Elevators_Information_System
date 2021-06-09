@@ -1,109 +1,6 @@
 <!-- wrapper -->
 		<div id="wrapper">
 
-			<!-- 
-				AVAILABLE HEADER CLASSES
-
-				Default nav height: 96px
-				.header-md 		= 70px nav height
-				.header-sm 		= 60px nav height
-
-				.b-0 		= remove bottom border (only with transparent use)
-				.transparent	= transparent header
-				.translucent	= translucent header
-				.sticky			= sticky header
-				.static			= static header
-				.dark			= dark header
-				.bottom			= header on bottom
-				
-				shadow-before-1 = shadow 1 header top
-				shadow-after-1 	= shadow 1 header bottom
-				shadow-before-2 = shadow 2 header top
-				shadow-after-2 	= shadow 2 header bottom
-				shadow-before-3 = shadow 3 header top
-				shadow-after-3 	= shadow 3 header bottom
-
-				.clearfix		= required for mobile menu, do not remove!
-
-				Example Usage:  class="clearfix sticky header-sm transparent b-0"
-			-->
-			<div id="header" class="navbar-toggleable-md sticky header-md clearfix">
-
-				<!-- TOP NAV -->
-				<header id="topNav">
-					<div class="container">
-
-						<!-- Mobile Menu Button -->
-						<button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
-							<i class="fa fa-bars"></i>
-						</button>
-
-						<!-- Logo -->
-						<a class="logo float-left scrollTo" href="#top">
-							<img src="./assets/image/R2.png" alt="" />
-						</a>
-
-						<!-- 
-							Top Nav 
-							
-							AVAILABLE CLASSES:
-							submenu-dark = dark sub menu
-						-->
-						<div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
-							<nav class="nav-main">
-
-								<!-- 
-									.nav-onepage
-									Required for onepage navigation links
-									
-									Add .external for an external link!
-								-->
-								<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
-									<li class="active"><!-- HOME -->
-										<a id="home-nav" href="index.html">
-											HOME
-										</a>
-									</li>
-									<li class="nav-item dropdown"><!-- SERVICES -->
-										<a class="nav-link dropdown-toggle" href="index.html#services" data-bs-toggle="dropdown" style="display: flex; align-items: center;">SERVICES </a>
-										 <ul class="dropdown-menu bg-white" style="border: none;">
-										   <li><a class="dropdown-item" href="./residential.html" style="color: black;" >RESIDENTIAL</a></li>
-										   <li><a class="dropdown-item" href="./commercial.html" style="color: black;" >COMMERCIAL</a></li>
-										   <li><a class="dropdown-item" href="./quote.html" style="color: black;" >GET QUOTE</a></li>
-										 </ul>
-									 </li>
-									<li><!-- PORTFOLIO -->
-										<a id="portfolio-nav" href="index.html#portfolio">
-											PORTFOLIO
-										</a>
-									</li>
-									<li><!-- NEWS -->
-										<a id="news-nav" href="index.html#news">
-											NEWS
-										</a>
-									</li>
-									<li><!-- CLIENTS -->
-										<a id="clients-nav" href="index.html#clients">
-											CLIENTS
-										</a>
-									</li>
-									<li><!-- CONTACT -->
-										<a id="contact-nav" href="index.html#contact">
-											CONTACT
-										</a>
-									</li>
-								</ul>
-
-							</nav>
-						</div>
-
-					</div>
-				</header>
-				<!-- /Top Nav -->
-
-			</div>
-
-
 
 			<hr class="m-0" /><!-- 1px line separator -->
 
@@ -130,7 +27,8 @@
 				</div>
 				<div class='container' style='display: flex; margin-top: 100px;'>
 					<div class="col-md-6">
-						<img src="./assets/image/NewJerseyAvenue.jpg" alt="New Jersey Avenue" style="width: 100%; max-height: 350px;" />
+						<%= image_tag("NewJerseyAvenue.jpg", width:"100%", height:"350px") %>
+						<%# <img src="./assets/image/NewJerseyAvenue.jpg" alt="New Jersey Avenue" style="width: 100%; max-height: 350px;" /> %>
 					</div>
 					<div class="col-md-6">
 						<h1 class="text-center">300 New Jersey Avenue, NW, Washington, D.C.</h1>
@@ -154,7 +52,8 @@
 							 certified LEED Gold.</p>
 					</div>
 					<div class="col-md-6">
-						<img src="./assets/image/oneWorldTrade.jpg" alt="/One World Trade" style="width: 100%; max-height: 470px;" />
+						<%= image_tag("oneWorldTrade.jpg", width:"100%", height:"470px") %>
+						<%# <img src="./assets/image/oneWorldTrade.jpg" alt="/One World Trade" style="width: 100%; max-height: 470px;" /> %>
 					</div>
 				</div>
 
