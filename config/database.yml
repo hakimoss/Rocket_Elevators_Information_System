@@ -14,7 +14,7 @@ default: &default
   database: Rocket_Elevators_Information_System_development
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
-  password: Raptor700$
+  password: Hakima_1990
   host: localhost
   port: 3306
   socket: /var/run/mysqld/mysqld.sock

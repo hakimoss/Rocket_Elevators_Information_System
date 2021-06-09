@@ -28,6 +28,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'bootsnap', '>=1.4.2', require: false
 # Use ActiveStorage variant
+gem 'devise', '~> 4.2'
 
 # gem 'mini_magick', '~> 4.8'
 
@@ -63,3 +64,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'jquery-rails'
+gem 'bootstrap-sass'
+gem 'font-awesome-rails'
