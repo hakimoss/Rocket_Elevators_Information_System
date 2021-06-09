@@ -11,14 +11,17 @@
     		<!-- mobile settings -->
 		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
 		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
-
+		
 		<%# <link rel="icon" href="./assets/image/icon-page.png"> %>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		
 
-    <!-- WEB FONTS : use %7C instead of | (pipe) -->
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700" rel="stylesheet" type="text/css" />
 
+
+		<script>var plugin_path = 'assets/plugins/';</script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+	
 		<!-- CORE CSS -->
 		<%# <link href="app/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" /> %>
 		<%# <link href="./app/assets/stylesheets/style.css" rel="stylesheet" type="text/css" /> %>
@@ -34,7 +37,7 @@
 		<link href="app/assets/stylesheets/layout.css" rel="stylesheet" type="text/css" /> %>
 		<%= stylesheet_link_tag "application" %>
 		
-		<%= javascript_include_tag 'application.js' %> 
+	
 
 		
 
@@ -95,7 +98,8 @@
 
 							<!-- Logo -->
 							<a class="logo float-left scrollTo" href="#top">
-								<img src="./assets/image/R2.png" alt="" />
+								<%# <img src="./assets/image/R2.png" alt="" /> %>
+								<%= image_tag("R2.png", height: "70px", class: "logo float-left scrollTo") %>>
 							</a>
 
 							<!-- 
@@ -244,7 +248,7 @@
 
 
 		<!-- JAVASCRIPT FILES -->
-		<script>var plugin_path = 'assets/plugins/';</script>
+		
 	<%#	<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script> %>
 		<%# <script src="assets/js/quote.js"></script> %>
 		<%# <script src="assets/js/scripts.js"></script> %>
