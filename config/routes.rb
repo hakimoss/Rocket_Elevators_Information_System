@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :users, controllers: { sessions: 'users/sessions' }
+ 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   root to: 'pages#home'
@@ -9,9 +11,7 @@ Rails.application.routes.draw do
   
   get '/commercial', to: 'pages#commercial'
 
-  resources :users, only: [:new, :create]
-
-
+  get '/registrations', to: 'devise#registrations'
 
 
 end
