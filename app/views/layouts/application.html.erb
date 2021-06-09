@@ -4,9 +4,9 @@
     <title>Rocket Elevator</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    	<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    	
 
     
     	<!-- WEB FONTS : use %7C instead of | (pipe) -->
@@ -38,7 +38,7 @@
 
 
   	<body class="smoothscroll enable-animation">
-
+		
 	
 		<div id="header" class="navbar-toggleable-md sticky header-md clearfix">
 
@@ -89,26 +89,26 @@
 										<li><a class="dropdown-item" href="./quote.html" style="color: black;" >GET QUOTE</a></li>
 									</ul>
 								</li>
-									<li><!-- PORTFOLIO -->
-										<a id="portfolio-nav" href="#portfolio">
-											PORTFOLIO
-										</a>
-									</li>
-									<li><!-- NEWS -->
-										<a id="news-nav" href="#news">
-											NEWS
-										</a>
-									</li>
-									<li><!-- CLIENTS -->
-										<a id="clients-nav" href="#clients">
-											CLIENTS
-										</a>
-									</li>
-									<li><!-- CONTACT -->
-										<a id="contact-nav" href="#contact">
-											CONTACT
-										</a>
-									</li>
+								<li><!-- PORTFOLIO -->
+									<a id="portfolio-nav" href="#portfolio">
+										PORTFOLIO
+									</a>
+								</li>
+								<li><!-- NEWS -->
+									<a id="news-nav" href="#news">
+										NEWS
+									</a>
+								</li>
+								<li><!-- CLIENTS -->
+									<a id="clients-nav" href="#clients">
+										CLIENTS
+									</a>
+								</li>
+								<li><!-- CONTACT -->
+									<a id="contact-nav" href="#contact">
+										CONTACT
+									</a>
+								</li>
 							</ul>
 								
 
@@ -155,8 +155,11 @@
 			<div id="header" class="navbar-toggleable-md sticky header-md clearfix">
 
 				<!-- TOP NAV -->
+			</div>
 
-    <%= yield %>
+		</div>		
+
+    	<%= yield %>
 
   		<!-- FOOTER -->
 			<footer id="footer">
@@ -239,7 +242,7 @@
 
 		<!-- JAVASCRIPT FILES -->
 		<script>var plugin_path = 'assets/plugins/';</script>
-	<%#	<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script> %>
+		<%#	<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script> %>
 		<%# <script src="assets/js/quote.js"></script> %>
 		<%# <script src="assets/js/scripts.js"></script> %>
 
@@ -260,24 +263,8 @@
 		-->
 		<%# <script src="//maps.google.com/maps/api/js?key=AIzaSyCqCn84CgZN6o1Xc3P4dM657HIxkX3jzPY"></script> %>
 		<%# <script src="assets/plugins/gmaps.js"></script> %>
-
-		
-		</div>
-		<!-- /wrapper -->
-
-
-		<!-- SCROLL TO TOP -->
-		<a href="#" id="toTop"></a>
-
-
-		<!-- PRELOADER -->
-		<div id="preloader">
-			<div class="inner">
-				<span class="loader"></span>
-			</div>
-		</div><!-- /PRELOADER -->
-
-
-
-  </body>
-</html>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>			
+	</body>	
+</html>	
