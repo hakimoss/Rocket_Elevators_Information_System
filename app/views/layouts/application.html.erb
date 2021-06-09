@@ -33,8 +33,8 @@
 		<%# <link href="app/assets/plugins/slider.revolution/css/settings.css" rel="stylesheet" type="text/css" /> %>
 
 		<!-- THEME CSS -->
-		<%# <link href="app/assets/stylesheets/essentials.css" rel="stylesheet" type="text/css" />
-		<link href="app/assets/stylesheets/layout.css" rel="stylesheet" type="text/css" /> %>
+		<%# <link href="app/assets/stylesheets/essentials.css" rel="stylesheet" type="text/css" /> %>
+		<%# link href="assets/stylesheets/layout.css" rel="stylesheet" type="text/css" /> %>
 		<%= stylesheet_link_tag "application" %>
 		
 	
@@ -99,7 +99,7 @@
 							<!-- Logo -->
 							<a class="logo float-left scrollTo" href="#top">
 								<%# <img src="./assets/image/R2.png" alt="" /> %>
-								<%= image_tag("R2.png", height: "70px", class: "logo float-left scrollTo") %>>
+								<%= image_tag("R2.png") %>
 							</a>
 
 							<!-- 
@@ -120,7 +120,7 @@
 									
 									<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
 										<li class="active"><!-- HOME -->
-											<a id="home-nav" href="#">
+											<a id="home-nav" href="#" style="display: flex; align-items: center;">
 												HOME
 											</a>
 										</li>
@@ -133,22 +133,22 @@
 											 </ul>
 										 </li>
 										<li><!-- PORTFOLIO -->
-											<a id="portfolio-nav" href="#portfolio">
+											<a id="portfolio-nav" href="#portfolio" style="display: flex; align-items: center;">
 												PORTFOLIO
 											</a>
 										</li>
 										<li><!-- NEWS -->
-											<a id="news-nav" href="#news">
+											<a id="news-nav" href="#news" style="display: flex; align-items: center;">
 												NEWS
 											</a>
 										</li>
 										<li><!-- CLIENTS -->
-											<a id="clients-nav" href="#clients">
+											<a id="clients-nav" href="#clients" style="display: flex; align-items: center;">
 												CLIENTS
 											</a>
 										</li>
 										<li><!-- CONTACT -->
-											<a id="contact-nav" href="#contact">
+											<a id="contact-nav" href="#contact" style="display: flex; align-items: center;">
 												CONTACT
 											</a>
 										</li>
@@ -239,13 +239,6 @@
 		<a href="#" id="toTop"></a>
 
 
-		<!-- PRELOADER -->
-		<div id="preloader">
-			<div class="inner">
-				<span class="loader"></span>
-			</div>
-		</div><!-- /PRELOADER -->
-
 
 		<!-- JAVASCRIPT FILES -->
 		
@@ -280,12 +273,12 @@
 		<a href="#" id="toTop"></a>
 
 
-		<!-- PRELOADER -->
+	<%# 	<!-- PRELOADER -->
 		<div id="preloader">
 			<div class="inner">
 				<span class="loader"></span>
 			</div>
-		</div><!-- /PRELOADER -->
+		</div><!-- /PRELOADER --> %>
 
 
 
