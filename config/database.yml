@@ -52,7 +52,7 @@ test:
 production:
   <<: *default
   encoding: utf8
-  database: Rocket_Elevators_Information_System_production
+  database: Rocket_Elevators_Information_production
   database: <%= ENV['RDS_DB_NAME'] %>
   username: <%= ENV['RDS_USERNAME'] %>
   password: <%= ENV['RDS_PASSWORD'] %>
