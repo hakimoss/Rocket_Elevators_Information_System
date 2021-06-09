@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   
   get '/commercial', to: 'pages#commercial'
 
+  resources :users, only: [:new, :create]
+
 
 
 

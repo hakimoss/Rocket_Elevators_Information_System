@@ -1,130 +1,130 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>RocketElevatorsInformationSystem</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+  	<head>
+    	<title>RocketElevatorsInformationSystem</title>
+    	<%= csrf_meta_tags %>
+    	<%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    	<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
     
-    <!-- WEB FONTS : use %7C instead of | (pipe) -->
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700" rel="stylesheet" type="text/css" />
+    	<!-- WEB FONTS : use %7C instead of | (pipe) -->
+			<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700" rel="stylesheet" type="text/css" />
 
-		<!-- CORE CSS -->
-		<link href="app/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-		<%# <link href="./app/assets/stylesheets/style.css" rel="stylesheet" type="text/css" /> %>
+			<!-- CORE CSS -->
+			<link href="app/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+			<%# <link href="./app/assets/stylesheets/style.css" rel="stylesheet" type="text/css" /> %>
 		
 
-		<!-- REVOLUTION SLIDER -->
-		<link href="app/assets/plugins/slider.revolution/css/extralayers.css" rel="stylesheet" type="text/css" />
-		<link href="app/assets/plugins/slider.revolution/css/settings.css" rel="stylesheet" type="text/css" />
+			<!-- REVOLUTION SLIDER -->
+			<link href="app/assets/plugins/slider.revolution/css/extralayers.css" rel="stylesheet" type="text/css" />
+			<link href="app/assets/plugins/slider.revolution/css/settings.css" rel="stylesheet" type="text/css" />
 
-		<!-- THEME CSS -->
-		<%# <link href="app/assets/stylesheets/essentials.css" rel="stylesheet" type="text/css" />
-		<link href="app/assets/stylesheets/layout.css" rel="stylesheet" type="text/css" /> %>
+			<!-- THEME CSS -->
+			<%# <link href="app/assets/stylesheets/essentials.css" rel="stylesheet" type="text/css" />
+			<link href="app/assets/stylesheets/layout.css" rel="stylesheet" type="text/css" /> %>
 	
-		<%= stylesheet_link_tag "application" %>
+			<%= stylesheet_link_tag "application" %>
 
-		<!-- PAGE LEVEL SCRIPTS -->
-		<%# <link href="app/assets/stylesheets/header-1.css" rel="stylesheet" type="text/css" />
-		<link href="app/assets/stylesheets/color_scheme/blue.css" rel="stylesheet" type="text/css" id="color_scheme" /> %>
+			<!-- PAGE LEVEL SCRIPTS -->
+			<%# <link href="app/assets/stylesheets/header-1.css" rel="stylesheet" type="text/css" />
+			<link href="app/assets/stylesheets/color_scheme/blue.css" rel="stylesheet" type="text/css" id="color_scheme" /> %>
 	
 
 
-  </head>
+  	</head>
 
 
-  <body>
+  	<body>
 
 	
-			<div id="header" class="navbar-toggleable-md sticky header-md clearfix">
+		<div id="header" class="navbar-toggleable-md sticky header-md clearfix">
 
-				<!-- TOP NAV -->
-				<header id="topNav">
+			<!-- TOP NAV -->
+			<header id="topNav">
 					
 					
-						<div class="container">
+				<div class="container">
 
-							<!-- Mobile Menu Button -->
-							<button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
-								<i class="fa fa-bars"></i>
-							</button>
+					<!-- Mobile Menu Button -->
+						<button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+							<i class="fa fa-bars"></i>
+						</button>
 
-							<!-- Logo -->
-							<a class="logo float-left scrollTo" href="#top">
-								<img src="/app/assets/images/R2.png" alt="" />
+						<!-- Logo -->
+						<a class="logo float-left scrollTo" href="#top">
+							<img src="/app/assets/images/R2.png" alt="" />
                                 
-							</a>
+						</a>
+
+						<!-- 
+							Top Nav 
+								
+							AVAILABLE CLASSES:
+							submenu-dark = dark sub menu
+						-->
+					<div id="home" class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
+						<nav class="nav-main">
 
 							<!-- 
-								Top Nav 
-								
-								AVAILABLE CLASSES:
-								submenu-dark = dark sub menu
-							-->
-							<div id="home" class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
-								<nav class="nav-main">
-
-									<!-- 
-										.nav-onepage
-										Required for onepage navigation links
+								.nav-onepage
+								Required for onepage navigation links
 										
-										Add .external for an external link!
-									-->
+								Add .external for an external link!
+							-->
 									
-									<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
-										<li class="active"><!-- HOME -->
-											<a id="home-nav" href="#">
-												HOME
-											</a>
-										</li>
-										<li class="nav-item dropdown"><!-- SERVICES -->
-											<a class="nav-link dropdown-toggle" href="#services" data-bs-toggle="dropdown" style="display: flex; align-items: center;">SERVICES </a>
-											 <ul class="dropdown-menu bg-white" style="border: none;">
-											   <li><a class="dropdown-item" href="./residential.html" style="color: black;" >RESIDENTIAL</a></li>
-											   <li><a class="dropdown-item" href="./commercial.html" style="color: black;" >COMMERCIAL</a></li>
-											   <li><a class="dropdown-item" href="./quote.html" style="color: black;" >GET QUOTE</a></li>
-											 </ul>
-										 </li>
-										<li><!-- PORTFOLIO -->
-											<a id="portfolio-nav" href="#portfolio">
-												PORTFOLIO
-											</a>
-										</li>
-										<li><!-- NEWS -->
-											<a id="news-nav" href="#news">
-												NEWS
-											</a>
-										</li>
-										<li><!-- CLIENTS -->
-											<a id="clients-nav" href="#clients">
-												CLIENTS
-											</a>
-										</li>
-										<li><!-- CONTACT -->
-											<a id="contact-nav" href="#contact">
-												CONTACT
-											</a>
-										</li>
+							<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
+								<li class="active"><!-- HOME -->
+									<a id="home-nav" href="#">
+										HOME
+									</a>
+								</li>
+								<li class="nav-item dropdown"><!-- SERVICES -->
+									<a class="nav-link dropdown-toggle" href="#services" data-bs-toggle="dropdown" style="display: flex; align-items: center;">SERVICES </a>
+									<ul class="dropdown-menu bg-white" style="border: none;">
+										<li><a class="dropdown-item" href="./residential.html" style="color: black;" >RESIDENTIAL</a></li>
+										<li><a class="dropdown-item" href="./commercial.html" style="color: black;" >COMMERCIAL</a></li>
+										<li><a class="dropdown-item" href="./quote.html" style="color: black;" >GET QUOTE</a></li>
 									</ul>
+								</li>
+									<li><!-- PORTFOLIO -->
+										<a id="portfolio-nav" href="#portfolio">
+											PORTFOLIO
+										</a>
+									</li>
+									<li><!-- NEWS -->
+										<a id="news-nav" href="#news">
+											NEWS
+										</a>
+									</li>
+									<li><!-- CLIENTS -->
+										<a id="clients-nav" href="#clients">
+											CLIENTS
+										</a>
+									</li>
+									<li><!-- CONTACT -->
+										<a id="contact-nav" href="#contact">
+											CONTACT
+										</a>
+									</li>
+							</ul>
 								
 
-								</nav>
-							</div>
+						</nav>
+					</div>
 
-						</div>
+				</div>
 				
-				</header>
+			</header>
 			
-				<!-- /Top Nav -->
+			<!-- /Top Nav -->
 
-			</div>
+		</div>
 
-    <%= yield %>
+		<%= yield %>
 
-  <!-- FOOTER -->
+  		<!-- FOOTER -->
 			<footer id="footer">
 				<div class="container">
 
@@ -184,7 +184,6 @@
 				</div>
 
 			</footer>
-			<!-- /FOOTER -->
-
-  </body>
+		<!-- /FOOTER -->
+  	</body>
 </html>
