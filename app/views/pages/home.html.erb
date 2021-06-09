@@ -252,13 +252,13 @@
 								<span class="image-hover-icon image-hover-dark"><!-- image-hover-light | image-hover-dark -->
 									<i class="fa fa-trophy"><!-- video icon --></i>
 								</span>
-								<%= image_tag("award.jpg", height: "200px", class: "img-fluid") %>
+								<%= image_tag("award.jpg", id: "servicesHeight200", class: "img-fluid") %>
 								<%# <img class="img-fluid" src="./assets/image/award.jpg" style="height: 200px;" alt="img" /> %>
 							</a>
 
 							<h3 class="mt-10">Our Projects and Awards</h3>
 							<p>Come and take a look at the many projects carried out by a talented and passionate team.</p>
-							<a href="#portfolio" class="growHover btn btn-blue">TAKE A LOOK</a>
+							<a href="#portfolio" id="servicesFlex" class="growHover btn btn-blue">TAKE A LOOK</a>
 						</div>
 
 						<div class="col-sm-4">
@@ -267,11 +267,11 @@
 									<i class="fa fa-youtube-square"><!-- video icon --></i>
 								</span>
 								<%# <img class="img-fluid" src="./assets/image/residential.jpeg" style="height: 200px;" alt="img" /> %>
-								<%= image_tag("residential.jpeg", height: "200px" , class: "img-fluid") %>
+								<%= image_tag("residential.jpeg", id: "servicesHeight200" , class: "img-fluid") %>
 							</a>
 							<h3 class="mt-10">Residential Services</h3>
 							<p>You will find here many solutions to overcome the several restrictions for residential elevator.</p>
-							<a href="./residential.html" class="growHover btn btn-blue">READ MORE</a>
+							<a href="./residential.html" id="servicesFlex" class="growHover btn btn-blue">READ MORE</a>
 						</div>
 
 						<div class="col-sm-4">
@@ -280,11 +280,11 @@
 									<i class="fa fa-youtube-square"><!-- video icon --></i>
 								</span>
 								<%# <img class="img-fluid" src="./app/assets/images/Corporate.jpeg" style="height: 200px;" alt="img" /> %>
-								<%= image_tag("Corporate.jpeg", height: "200px" , class: "img-fluid") %>
+								<%= image_tag("Corporate.jpeg", id: "servicesHeight200" , class: "img-fluid") %>
 							</a>
 							<h3 class="mt-10">Commercial Service</h3>
 							<p>Take an interest in the numerous business solutions linked to commercial elevators and learn how to make the most of them.</p>
-							<a href="./commercial.html" class="growHover btn btn-blue">READ MORE</a>
+							<a href="./commercial.html" id="servicesFlex" class="growHover btn btn-blue">READ MORE</a>
 						</div>
 
 					</div>
@@ -298,7 +298,7 @@
 
 			<!-- Parallax -->
 			<%# <section class="parallax parallax-1" style="background-image: url('./assets/image/AdobeStock_162479912.jpeg');"> %>
-			<section class="parallax parallax-1" style="background-image: url(asset-path('AdobeStock_162479912.jpeg'));">
+			<section class="parallax parallax-1" style="background-image: url(AdobeStock_162479912.jpeg');">
 				<div class="overlay dark-5"><!-- dark overlay [1 to 9 opacity] --></div>
 
 				<div class="container">
@@ -310,7 +310,7 @@
 								<div class="col-md-12 text-center">
 									
 									<a class="colorHover btn btn-red btn-lg" href="#contact">OUR SERVICES &nbsp; <i class="fa fa-angle-right"></i></a>
-									<a class="colorHover btn btn-red btn-lg" href="./quote.html">GET A QUOTE &nbsp; <i class="fa fa-angle-right"></i></a>
+									<a class="colorHover btn btn-red btn-lg" href="./quote">GET A QUOTE &nbsp; <i class="fa fa-angle-right"></i></a>
 								</div>
 								
 										
@@ -364,7 +364,7 @@
 										</span>
 
 										<%# <img class="img-fluid" src="./assets/image/lifton2.jpg" style="height: 189.5px;" width="600" height="399" alt=""> %>
-										<%= image_tag("lifton2.jpg", height: "189.5px", class: "img-fluid") %>
+										<%= image_tag("lifton2.jpg", id: "portfolioHeight189", class: "img-fluid") %>
 										
 									</figure>
 
@@ -397,7 +397,7 @@
 										</span>
 
 										<%# <img class="img-fluid" src="./assets/image/Home-Elevator-Manufacturers-Main.png" style="height: 189.5px;" width="600" height="399" alt=""> %>
-										<%= image_tag("Home-Elevator-Manufacturers-Main.png", height: "189.5px", class: "img-fluid") %>
+										<%= image_tag("Home-Elevator-Manufacturers-Main.png", id: "portfolioHeight189", class: "img-fluid") %>
 									</figure>
 
 									<div class="item-box-desc">
@@ -429,7 +429,7 @@
 										</span>
 
 										<%# <img class="img-fluid" src="./assets/image/AdobeStock_3294993.jpeg" style="height: 189.5px;" width="600" height="399" alt=""> %>
-										<%= image_tag("AdobeStock_3294993.jpeg", height: "189.5px", class: "img-fluid") %>
+										<%= image_tag("AdobeStock_3294993.jpeg", id: "portfolioHeight189", class: "img-fluid") %>
 									</figure>
 
 									<div class="item-box-desc">
@@ -460,7 +460,7 @@
 										</span>
 
 										<%# <img class="img-fluid" src="./assets/image/AdobeStock_66781279.jpeg" style="height: 189.5px;" width="600" height="399" alt=""> %>
-										<%= image_tag("AdobeStock_66781279.jpeg", height: "189.5px", class: "img-fluid") %>
+										<%= image_tag("AdobeStock_66781279.jpeg", id: "portfolioHeight189", class: "img-fluid") %>
 									</figure>
 
 									<div class="item-box-desc">
@@ -492,7 +492,7 @@
 										</span>
 
 										<%# <img class="img-fluid" src="./assets/image/HE-Aplication-image-03.jpg" style="height: 189.5px;" width="600" height="399" alt=""> %>
-										<%= image_tag("HE-Aplication-image-03.jpg", height: "189.5px", class: "img-fluid") %>
+										<%= image_tag("HE-Aplication-image-03.jpg", id: "portfolioHeight189", class: "img-fluid") %>
 									</figure>
 
 									<div class="item-box-desc">
@@ -524,7 +524,7 @@
 										</span>
 
 										<%# <img class="img-fluid" src="./assets/image/Corporate.jpeg" style="height: 189.5px;" width="600" height="399" alt=""> %>
-										<%= image_tag("Corporate.jpeg", height: "189.5px", class: "img-fluid") %>
+										<%= image_tag("Corporate.jpeg", id: "portfolioHeight189", class: "img-fluid") %>
 									</figure>
 
 									<div class="item-box-desc">
@@ -556,7 +556,7 @@
 										</span>
 
 										<%# <img class="img-fluid" src="./assets/image/Glass-elevator-for-home.png" style="height: 189.5px;" width="600" height="399" alt=""> %>
-										<%= image_tag("Glass-elevator-for-home.png", height: "189.5px", class: "img-fluid") %>
+										<%= image_tag("Glass-elevator-for-home.png", id: "portfolioHeight189", class: "img-fluid") %>
 									</figure>
 
 									<div class="item-box-desc">
@@ -589,7 +589,7 @@
 										</span>
 
 										<%# <img class="img-fluid" src="./assets/image/Residential-Elevator.jpg" style="height: 189.5px;" width="600" height="399" alt=""> %>
-										<%= image_tag("Residential-Elevator.jpg", height: "189.5px", class: "img-fluid") %>
+										<%= image_tag("Residential-Elevator.jpg", id: "portfolioHeight189", class: "img-fluid") %>
 									</figure>
 
 									<div class="item-box-desc">
@@ -619,7 +619,7 @@
 										</span>
 
 										<%# <img class="img-fluid" src="./assets/image/Interiors-workplace-corporate-elevator-lobby-02.jpg" style="height: 189.5px;" width="600" height="399" alt=""> %>
-										<%= image_tag("Interiors-workplace-corporate-elevator-lobby-02.jpg", height: "189.5px", class: "img-fluid") %>
+										<%= image_tag("Interiors-workplace-corporate-elevator-lobby-02.jpg", id: "portfolioHeight189", class: "img-fluid") %>
 									</figure>
 
 									<div class="item-box-desc">
@@ -649,7 +649,7 @@
 										</span>
 
 										<%# <img class="img-fluid" src="./assets/image/AdobeStock_124493370.jpeg" style="height: 189.5px;" width="600" height="399" alt=""> %>
-										<%= image_tag("AdobeStock_124493370.jpeg", height: "189.5px", class: "img-fluid") %>
+										<%= image_tag("AdobeStock_124493370.jpeg", id: "portfolioHeight189", class: "img-fluid") %>
 									</figure>
 
 									<div class="item-box-desc">
@@ -679,7 +679,7 @@
 										</span>
 
 										<%# <img class="img-fluid" src="./assets/image/khartoum-corporate-center.jpg" style="height: 189.5px;" width="600" height="399" alt=""> %>
-										<%= image_tag("khartoum-corporate-center.jpg", height: "189.5px", class: "img-fluid") %>
+										<%= image_tag("khartoum-corporate-center.jpg", id: "portfolioHeight189", class: "img-fluid") %>
 									</figure>
 
 									<div class="item-box-desc">
@@ -709,7 +709,7 @@
 										</span>
 
 										<%# <img class="img-fluid" src="./assets/image/residential-panoramic-glass-elevator.jpg" style="height: 189.5px;" width="600" height="399" alt=""> %>
-										<%= image_tag("residential-panoramic-glass-elevator.jpg", height: "189.5px", class: "img-fluid") %>
+										<%= image_tag("residential-panoramic-glass-elevator.jpg", id: "portfolioHeight189", class: "img-fluid") %>
 									</figure>
 
 									<div class="item-box-desc">
@@ -807,7 +807,7 @@
 						<div class="img-hover">
 							<a target="_blank" href="https://goodnewsgum.com/uncategorized/37827/futuristics-overview-of-elevators-and-escalators-market-industry-insights-and-forecast-2021-2026-by-kone-corporation-united-technologies-schindler-mitsubishi-electric-corporation/">
 								<%# <img class="img-fluid" src="./assets/image/new_futuric.jpg" style="height: 175px; width: 100%;" alt=""> %>
-								<%= image_tag("new_futuric.jpg", height: "175px", width: '100%', class: "img-fluid") %>
+								<%= image_tag("new_futuric.jpg", id: 'newsHeight175', width: '100%', class: "img-fluid") %>
 							</a>
 
 							<h4 class="text-left mt-20"><a target="_blank" href="https://goodnewsgum.com/uncategorized/37827/futuristics-overview-of-elevators-and-escalators-market-industry-insights-and-forecast-2021-2026-by-kone-corporation-united-technologies-schindler-mitsubishi-electric-corporation/">Futuristics Overview of Elevators</a></h4>
@@ -823,7 +823,7 @@
 						<div class="img-hover">
 							<a target="_blank" href="https://goodnewsgum.com/uncategorized/32282/iot-in-elevators-market-growth-opportunities-cost-structure-analysis-and-forecast-upto-2027/">
 								<%# <img class="img-fluid" src="./assets/image/news2.png" style="height: 175px; width: 100%;" alt=""> %>
-								<%= image_tag("news2.png", height: "175px", width: '100%', class: "img-fluid") %>
+								<%= image_tag("news2.png", id: 'newsHeight175', width: '100%', class: "img-fluid") %>
 							</a>
 
 							<h4 class="text-left mt-20"><a target="_blank" href="https://goodnewsgum.com/uncategorized/32282/iot-in-elevators-market-growth-opportunities-cost-structure-analysis-and-forecast-upto-2027/">IoT in Elevators Market Growth</a></h4>
@@ -839,7 +839,7 @@
 						<div class="img-hover">
 							<a target="_blank" href="http://www.tradearabia.com/news/LIFE_382029.html">
 								<%# <img class="img-fluid" src="./assets/image/news3.jpg" style="height: 175px; width: 100%;" alt=""> %>
-								<%= image_tag("news3.jpg", height: "175px", width: '100%', class: "img-fluid") %>
+								<%= image_tag("news3.jpg", id: 'newsHeight175', width: '100%', class: "img-fluid") %>
 							</a>
 
 							<h4 class="text-left mt-20"><a target="_blank" href="http://www.tradearabia.com/news/LIFE_382029.html">Kone develops new tech solution for wheelchair users</a></h4>
@@ -855,7 +855,7 @@
 						<div class="img-hover">
 							<a target="_blank" href="https://www.designboom.com/architecture/adriano-design-unravels-breathtaking-elevator-tower-china-paddy-05-02-2021/">
 								<%# <img class="img-fluid" src="./assets/image/adriano-design-house-on-the-paddy-rice-china-designboom-05.jpg" style="height: 175px; width: 100%;" alt=""> %>
-								<%= image_tag("adriano-design-house-on-the-paddy-rice-china-designboom-05.jpg", height: "175px", width: '100%', class: "img-fluid") %>
+								<%= image_tag("adriano-design-house-on-the-paddy-rice-china-designboom-05.jpg", id: 'newsHeight175', width: '100%', class: "img-fluid") %>
 							</a>
 
 							<h4 class="text-left mt-20"><a target="_blank" href="https://www.designboom.com/architecture/adriano-design-unravels-breathtaking-elevator-tower-china-paddy-05-02-2021/">Adriano design spirals glass elevator home</a></h4>
@@ -870,7 +870,7 @@
 						<div class="img-hover">
 							<a target="_blank" href="https://www.mccourier.com/elevator-and-elevator-control-market-increasing-demand-with-industry-professionals-thyssenkrupp-otis-elevator-kone/">
 								<%# <img class="img-fluid" src="./assets/image/Global-Elevator-and-Elevator-Control-Market.jpg" style="height: 175px; width: 100%;" alt=""> %>
-								<%= image_tag("Global-Elevator-and-Elevator-Control-Market.jpg", height: "175px", width: '100%', class: "img-fluid") %>>
+								<%= image_tag("Global-Elevator-and-Elevator-Control-Market.jpg", id: 'newsHeight175', width: '100%', class: "img-fluid") %>>
 							</a>
 							<h4 class="text-left mt-20"><a target="_blank" href="https://www.mccourier.com/elevator-and-elevator-control-market-increasing-demand-with-industry-professionals-thyssenkrupp-otis-elevator-kone/">Elevator and Elevator Control Market</a></h4>
 							<p class="text-left">A new Research Report published by JCMR under the title Global Elevator and Elevator Control Market (COVID 19 Version)...</p>
@@ -885,7 +885,7 @@
 						<div class="img-hover">
 							<a target="_blank" href="https://ksusentinel.com/2021/05/04/escalator-and-elevator-market-to-rise-in-near-future-2027-key-players-kohler-elevator-gmbh-kone-corp/">
 								<%# <img class="img-fluid" src="./assets/image/gears-1236578_1920-300x200.jpg" style="height: 175px; width: 100%;" alt=""> %>
-								<%= image_tag("gears-1236578_1920-300x200.jpg", height: "175px", width: '100%', class: "img-fluid") %>>
+								<%= image_tag("gears-1236578_1920-300x200.jpg", id: 'newsHeight175', width: '100%', class: "img-fluid") %>>
 							</a>
 							<h4 class="text-left mt-20"><a target="_blank" href="https://ksusentinel.com/2021/05/04/escalator-and-elevator-market-to-rise-in-near-future-2027-key-players-kohler-elevator-gmbh-kone-corp/">Escalator And Elevator Market to rise in Near Future</a></h4>
 							<p class="text-left">The Escalator And Elevator Market report formulated at DECISIVE MARKETS INSIGHTS includes a detailed synopsis...</p>
@@ -900,7 +900,7 @@
 						<div class="img-hover">
 							<a target="_blank" href="https://soccernurds.com/uncategorized/4265714/medical-elevators-market-size-and-forecast-2027-top-key-players-otis-fujitec-schindler-mitsubishi-electric-sanyo/">
 								<%# <img class="img-fluid" src="./assets/image/img-17.png" style="height: 175px; width: 100%;" alt=""> %>
-								<%= image_tag("img-17.png", height: "175px", width: '100%', class: "img-fluid") %>>
+								<%= image_tag("img-17.png", id: 'newsHeight175', width: '100%', class: "img-fluid") %>>
 							</a>
 							<h4 class="text-left mt-20"><a target="_blank" href="https://soccernurds.com/uncategorized/4265714/medical-elevators-market-size-and-forecast-2027-top-key-players-otis-fujitec-schindler-mitsubishi-electric-sanyo/">Medical Elevators Market Size and Forecast 2027</a></h4>
 							<p class="text-left">The Medical Elevators Market research report aims to provide the readers with an accurate and data-based assessment...</p>
@@ -914,7 +914,7 @@
 						<div class="img-hover">
 							<a target="_blank" href="https://www.progressiverailroading.com/intermodal/news/G3-opens-new-grain-elevators-in-Alberta--62386">
 								<%# <img class="img-fluid" src="./assets/image/PR0121-G3Elevators.jpg" style="height: 175px; width: 100%;" alt=""> %>
-								<%= image_tag("PR0121-G3Elevators.jpg", height: "175px", width: '100%', class: "img-fluid") %>>
+								<%= image_tag("PR0121-G3Elevators.jpg", id: 'newsHeight175', width: '100%', class: "img-fluid") %>>
 							</a>
 							<h4 class="text-left mt-20"><a target="_blank" href="https://www.progressiverailroading.com/intermodal/news/G3-opens-new-grain-elevators-in-Alberta--62386">G3 opens new grain elevators in Alberta</a></h4>
 							<p class="text-left">The facilities in Wetaskiwin, Erskine (G3 Stettler County) and Irricana are high-efficiency.</p>
@@ -958,7 +958,7 @@
 									ASCENT-CORP
 								</span>
 								<%# <img class="img-fluid" src="./assets/image/logo/logo1.jpg" alt="client" /> %>
-								<%= image_tag("logo/logo1.jpg", class: "img-fluid") %>>
+								<%= image_tag("logo/logo1.jpg", class: "img-fluid") %>
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
@@ -967,7 +967,7 @@
 									SMARTLY ALARM
 								</span>
 								<%# <img class="img-fluid" src="./assets/image/logo/logo2.jpg" alt="client" /> %>
-								<%= image_tag("logo/logo2.jpg", class: "img-fluid") %>>
+								<%= image_tag("logo/logo2.jpg", class: "img-fluid") %>
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
@@ -976,7 +976,7 @@
 									BEST-ISO
 								</span>
 								<%# <img class="img-fluid" src="./assets/image/logo/logo3.jpg" alt="client" /> %>
-								<%= image_tag("logo/logo3.jpg", class: "img-fluid") %>>
+								<%= image_tag("logo/logo3.jpg", class: "img-fluid") %>
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
@@ -985,7 +985,7 @@
 									CORPORATE-ONLINE
 								</span>
 								<%# <img class="img-fluid" src="./assets/image/logo/logo4.jpg" alt="client" /> %>
-								<%= image_tag("logo/logo4.jpg", class: "img-fluid") %>>
+								<%= image_tag("logo/logo4.jpg", class: "img-fluid") %>
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
@@ -994,7 +994,7 @@
 									INTEL
 								</span>
 								<%# <img class="img-fluid" src="./assets/image/logo/logo5.jpg" alt="client" /> %>
-								<%= image_tag("logo/logo5.jpg", class: "img-fluid") %>>
+								<%= image_tag("logo/logo5.jpg", class: "img-fluid") %>
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
@@ -1003,7 +1003,7 @@
 									ROLEX
 								</span>
 								<%# <img class="img-fluid" src="./assets/image/logo/logo6.jpg" alt="client" /> %>
-								<%= image_tag("logo/logo6.jpg", class: "img-fluid") %>>
+								<%= image_tag("logo/logo6.jpg", class: "img-fluid") %>
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
@@ -1012,7 +1012,7 @@
 									MOBIL UNITY
 								</span>
 								<%# <img class="img-fluid" src="./assets/image/logo/logo7.jpg" alt="client" /> %>
-								<%= image_tag("logo/logo7.jpg", class: "img-fluid") %>>
+								<%= image_tag("logo/logo7.jpg", class: "img-fluid") %>
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
@@ -1021,7 +1021,7 @@
 									MICROSOFT
 								</span>
 								<%# <img class="img-fluid" src="./assets/image/logo/logo8.jpg" alt="client" /> %>
-								<%= image_tag("logo/logo8.jpg", class: "img-fluid") %>>
+								<%= image_tag("logo/logo8.jpg", class: "img-fluid") %>
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
@@ -1030,7 +1030,7 @@
 									MITSUBISHI MOTORS
 								</span>
 								<%# <img class="img-fluid" src="./assets/image/logo/logo9.jpg" alt="client" /> %>
-								<%= image_tag("logo/logo9.jpg", class: "img-fluid") %>>
+								<%= image_tag("logo/logo9.jpg", class: "img-fluid") %>
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
@@ -1039,7 +1039,7 @@
 									NATURAL HISTORY MUSEAUM
 								</span>
 								<%# <img class="img-fluid" src="./assets/image/logo/logo10.jpg" alt="client" /> %>
-								<%= image_tag("logo/logo10.jpg", class: "img-fluid") %>>
+								<%= image_tag("logo/logo10.jpg", class: "img-fluid") %>
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
@@ -1048,7 +1048,7 @@
 									FULL TILT LOGISTICS
 								</span>
 								<%# <img class="img-fluid" src="./assets/image/logo/logo11.jpg" alt="client" /> %>
-								<%= image_tag("logo/logo11.jpg", class: "img-fluid") %>>
+								<%= image_tag("logo/logo11.jpg", class: "img-fluid") %>
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
@@ -1057,7 +1057,7 @@
 									DESJARDINS
 								</span>
 								<%# <img class="img-fluid" src="./assets/image/logo/logo12.jpg" alt="client" /> %>
-								<%= image_tag("logo/logo12.jpg", class: "img-fluid") %>>
+								<%= image_tag("logo/logo12.jpg", class: "img-fluid") %>
 							</a>
 						</li>
 						
@@ -1245,4 +1245,43 @@
 
 				</div>
 			</section>
+<<<<<<< HEAD
 			<!-- /CONTACT -->
+=======
+			<!-- /CONTACT -->
+
+			<!-- 
+			GMAP.JS 
+			http://hpneo.github.io/gmaps/
+		-->
+		<script src="//maps.google.com/maps/api/js?key=AIzaSyCqCn84CgZN6o1Xc3P4dM657HIxkX3jzPY"></script>
+		<script src="assets/plugins/gmaps.js"></script>
+		<script>
+
+			jQuery(document).ready(function(){
+
+				/**
+					@BASIC GOOGLE MAP
+				**/
+				var map2 = new GMaps({
+					div: '#map2',
+					lat: 46.843309564747045,
+					lng: -71.27943730793184,
+					scrollwheel: false
+				});
+
+				var marker = map2.addMarker({
+					lat: 46.843309564747045,
+					lng: -71.27943730793184,
+					title: 'Company, Inc.'
+				});
+
+			});
+
+		</script>
+
+
+
+
+			
+>>>>>>> fc7f8fd8450e74dd86c3cc3020c52ce7dd10a77e
