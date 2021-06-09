@@ -15,19 +15,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-
 //= require bootstrap
 //= require_tree .
 
 
-
-
-
-/* require("js/quote.js").start()
-require("js/scripts.js").start()
-require("plugins/slider.revolution/js/jquery.themepunch.tools.min.js").start()
-require("plugins/slider.revolution/js/jquery.themepunch.revolution.min.js").start()
-require("js/view/demo.revolution_slider.js").start()
-require("js/contact.js").start()
-require("//maps.google.com/maps/api/js?key=AIzaSyCqCn84CgZN6o1Xc3P4dM657HIxkX3jzPY").start()
-require("plugins/gmaps.js").start() */

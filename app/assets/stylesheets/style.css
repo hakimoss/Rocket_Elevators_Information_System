@@ -3,9 +3,15 @@
     background-color: #dc3545;
     transition: 0.7s;
 }
+#servicesFlex {
+    display: flex;
+    align-items: center;
+    width: 115px
+}
 
 .colorHover:hover {
     background-color: #1265a8;
     transition: 0.7s;
 
 }
+
