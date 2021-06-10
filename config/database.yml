@@ -11,12 +11,10 @@
 #
 default: &default
   adapter: mysql2
-  database: Rocket_Elevators_Information_System_development
+  database: Rocket_Elevators_Information_System_development@localhost
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
   password: Raptor700$
-  host: localhost
-  port: 3306
   socket: /var/run/mysqld/mysqld.sock
 
 development:
