@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: { sessions: 'users/sessions' }
+  devise_for :users, controllers: { registrations: "users/registrations", sessions: "users/sessions" }
  
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   root to: 'pages#home'
@@ -11,7 +12,8 @@ Rails.application.routes.draw do
   
   get '/commercial', to: 'pages#commercial'
 
-  get '/registrations', to: 'devise#registrations'
-
+  devise_scope :user do
+    get '/signout', to: 'devise/sessions#destroy', as: :signout
+  end
 
 end
