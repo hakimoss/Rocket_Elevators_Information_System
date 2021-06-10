@@ -4,9 +4,9 @@
     <title>Rocket Elevator</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    	
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
     		<!-- mobile settings -->
 		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
@@ -46,11 +46,11 @@
 		<link href="app/assets/stylesheets/color_scheme/blue.css" rel="stylesheet" type="text/css" id="color_scheme" /> %>
 
 
-  	</head>
+  </head>
 
 
-  	<body class="smoothscroll enable-animation">
-		
+  <body class="smoothscroll enable-animation">
+
 	
 			<!-- wrapper -->
 		<div id="wrapper">
@@ -85,16 +85,16 @@
 			
 			<div id="header" class="navbar-toggleable-md sticky header-md clearfix">
 
-			<!-- TOP NAV -->
-			<header id="topNav">
+				<!-- TOP NAV -->
+				<header id="topNav">
 					
 					
-				<div class="container">
+						<div class="container">
 
-					<!-- Mobile Menu Button -->
-						<button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
-							<i class="fa fa-bars"></i>
-						</button>
+							<!-- Mobile Menu Button -->
+							<button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+								<i class="fa fa-bars"></i>
+							</button>
 
 							<!-- Logo -->
 							<a class="logo float-left scrollTo" href="#top">
@@ -102,21 +102,21 @@
 								<%= image_tag("R2.png") %>
 							</a>
 
-						<!-- 
-							Top Nav 
-								
-							AVAILABLE CLASSES:
-							submenu-dark = dark sub menu
-						-->
-					<div id="home" class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
-						<nav class="nav-main">
-
 							<!-- 
-								.nav-onepage
-								Required for onepage navigation links
-										
-								Add .external for an external link!
+								Top Nav 
+								
+								AVAILABLE CLASSES:
+								submenu-dark = dark sub menu
 							-->
+							<div id="home" class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
+								<nav class="nav-main">
+
+									<!-- 
+										.nav-onepage
+										Required for onepage navigation links
+										
+										Add .external for an external link!
+									-->
 									
 									<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
 										<li class="active"><!-- HOME -->
@@ -152,7 +152,7 @@
 												CONTACT
 											</a>
 										</li>
-
+										
 										<li>
 											<a href="<%= new_user_registration_path %>" style="display: flex; align-items: center;">
 												Sign Up
@@ -163,22 +163,24 @@
 												Sign In
 											</a>
 										</li>
-									</ul>	
 
-						</nav>
-					</div>
+									</ul>
+								
 
-				</div>
+								</nav>
+							</div>
+
+						</div>
 				
-			</header>
+				</header>
 			
-			<!-- /Top Nav -->
+				<!-- /Top Nav -->
 
-		</div>
+			</div>
 
     <%= yield %>
 
-  		<!-- FOOTER -->
+  <!-- FOOTER -->
 			<footer id="footer">
 				<div class="container">
 
