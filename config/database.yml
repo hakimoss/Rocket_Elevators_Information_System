@@ -58,3 +58,4 @@ production:
   port: <%= ENV['RDS_PORT'] %>
   username: Rocket_Elevators_Information_System
   password: <%= ENV['ROCKET_ELEVATORS_INFORMATION_SYSTEM_DATABASE_PASSWORD'] %>
+
