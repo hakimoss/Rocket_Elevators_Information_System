@@ -109,6 +109,7 @@
 								AVAILABLE CLASSES:
 								submenu-dark = dark sub menu
 							-->
+					
 							<div id="home" class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
 								<nav class="nav-main">
 
@@ -153,21 +154,22 @@
 												CONTACT
 											</a>
 										</li>
-						
-										<% if user_signed_in? %>
-											<button class="button"><%= link_to('Logout', destroy_user_session_path, :method => :delete)%></button>
-										<% elsif !user_signed_in? %>
-											<p class="sign_in"><%= link_to 'Login', new_user_session_path %></p>
-											<p class="sign_up"><%= link_to 'Sign Up', new_user_registration_path %></p>
-										<% end %>		
+										<li style="display: flex; text-align: center;">
+											<% if user_signed_in? %>
+												<button class="button"><%= link_to('Logout', destroy_user_session_path, :method => :delete)%></button>
+											<% elsif !user_signed_in? %>
+												<p class="sign_in"><%= link_to 'Login', new_user_session_path %></p>
+												<p class="sign_up"><%= link_to 'Sign Up', new_user_registration_path %></p>
+											<% end %>		
+										</li>
 
 									</ul>
-								
+								</div>
 
 								</nav>
 							</div>
 
-						</div>
+						
 				
 				</header>
 			
