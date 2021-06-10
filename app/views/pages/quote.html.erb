@@ -57,7 +57,7 @@
 											<label for="contact_department">Department</label>
 											
 											<select id="building_type" class="form-control pointer" name="contact[department]">
-												<option value="">--- Select ---</option>
+												<option value="select">--- Select ---</option>
 												<option value="residential">Residential</option>
 												<option value="commercial">Commercial</option>
 												<option value="corporate">Corporate</option>
@@ -66,8 +66,7 @@
 										</div>
 									</div>
 
-							<!-- FORM RESIDENTIAL -->
-									<div id="residential" class="building_type row" >
+									<div id="div">
 										<div id="number-of-apartments" class="col-md-4">
 											<%= label_tag  "name_id", "N. of Appartements *" %>
 											<%= number_field_tag "number_appartement", "0", placeholder: "N. of Appartements", class: "form-control", min: "0" %>
@@ -80,88 +79,32 @@
 											<%= label_tag  "name_id", "N. of Basements *" %>
 											<%= number_field_tag "number_basement", "0", placeholder: "N. of Basements", class: "form-control", min: "0" %>
 										</div>
-									</div>
-							<!-- FORM RESIDENTIAL -->	
-							
-							<!-- FORM COMMERCIAL -->
-									<div id="commercial" class="building_type row" >
 										<div id="number-of-companies" class="col-md-4">
 											<%= label_tag  "name_id", "N. of Compagnies *" %>
 											<%= number_field_tag "number_compagny", "0", placeholder: "N. of Compagnies", class: "form-control", min: "0" %>
 										</div>
-										<div id="number-of-floors" class="col-md-4">
-											<%= label_tag  "name_id", "N. of Floor *" %>
-											<%= number_field_tag "number_floor", "0", placeholder: "N. of Floor", class: "form-control", min: "0" %>
-										</div>
-										<div id="number-of-basements" class="col-md-4">
-											<%= label_tag  "name_id", "N. of Basements *" %>
-											<%= number_field_tag "number_basement", "0", placeholder: "N. of Basements", class: "form-control", min: "0" %>
-										</div>
-										<div id="number-of-parking-spots" class="col-md-6">
-											<%= label_tag  "name_id", "N. of Parking Spots *" %>
-											<%= number_field_tag "number_parking", "0", placeholder: "N. of Parking Spots", class: "form-control", min: "0" %>
-										</div>
-										<div id="number-of-elevators" class="col-md-6">
-											<%= label_tag  "name_id", "N. of Elevator Cages *" %>
-											<%= number_field_tag "number_elevator", "0", placeholder: "N. of Elevator Cages", class: "form-control", min: "0" %>
-										</div>
-									 </div>
-							<!-- FORM COMMERCIAL -->
-
-							<!-- FORM CORPORATE -->
-									<div id="corporate" class="building_type row" >
 										<div id="number-of-corporations" class="col-md-4">
 											<%= label_tag  "name_id", "N. of Corporate *" %>
 											<%= number_field_tag "number_corporate", "0", placeholder: "N. of Corporate", class: "form-control", min: "0" %>
 										</div>
-										<div id="number-of-floors" class="corporateChanger col-md-4">
-											<%= label_tag  "name_id", "N. of Floor *" %>
-											<%= number_field_tag "number_floor", "0", placeholder: "N. of Floor", class: "form-control", min: "0" %>
-										</div>
-										<div id="number-of-basements" class="corporateChanger col-md-4">
-											<%= label_tag  "name_id", "N. of Basements *" %>
-											<%= number_field_tag "number_basement", "0", placeholder: "N. of Basements", class: "form-control", min: "0" %>
-										</div>
-										<div id="number-of-parking-spots" class="col-md-6">
-											<%= label_tag  "name_id", "N. of Parking Spots *" %>
-											<%= number_field_tag "number_parking", "0", placeholder: "N. of Parking Spots", class: "form-control", min: "0" %>
-										</div>
-										<div id="maximum-occupancy" class="corporateChanger col-md-6">
-											<%= label_tag  "name_id", "N. of Occupancy by stage *" %>
-											<%= number_field_tag "max_occupancy", "0", placeholder: "N. of Occupancy by stage", class: "form-control", min: "0" %>
-										</div>
-									</div>
-							<!-- FORM CORPORATE -->
-							
-							<!-- FORM HYBRID -->
-									<div id="hybrid" class="building_type row" >
-										<div id="number-of-companies" class="col-md-4">
-											<%= label_tag  "name_id", "N. of Companies *" %>
-											<%= number_field_tag "number_compagny", "0", placeholder: "N. of Companies", class: "form-control", min: "0" %>
-										</div>
-										<div id="number-of-floors" class="hybridChanger col-md-4">
-											<%= label_tag  "name_id", "N. of Floor *" %>
-											<%= number_field_tag "number_floor", "0", placeholder: "N. of Floor", class: "form-control", min: "0" %>
-										</div>
-										<div id="number-of-basements" class="hybridChanger col-md-4">
-											<%= label_tag  "name_id", "N. of Basements *" %>
-											<%= number_field_tag "number_basement", "0", placeholder: "N. of Basements", class: "form-control", min: "0" %>
+										<div id="number-of-elevators" class="col-md-4">
+											<%= label_tag  "name_id", "N. of Elevator Cages *" %>
+											<%= number_field_tag "number_elevator", "0", placeholder: "N. of Elevator Cages", class: "form-control", min: "0" %>
 										</div>
 										<div id="number-of-parking-spots" class="col-md-4">
 											<%= label_tag  "name_id", "N. of Parking Spots *" %>
 											<%= number_field_tag "number_parking", "0", placeholder: "N. of Parking Spots", class: "form-control", min: "0" %>
 										</div>
-										<div id="maximum-occupancy" class="hybridChanger col-md-4">
-											<%= label_tag  "name_id", "N. of Occupancy by Stage *" %>
-											<%= number_field_tag "max_occupancy", "0", placeholder: "N. of Occupancy by Stage", class: "form-control", min: "0" %>
+										<div id="maximum-occupancy" class="corporateChanger col-md-4">
+											<%= label_tag  "name_id", "N. of Occupancy by stage *" %>
+											<%= number_field_tag "max_occupancy", "0", placeholder: "N. of Occupancy by stage", class: "form-control", min: "0" %>
 										</div>
 										<div id="business-hours" class="col-md-4">
 											<%= label_tag  "name_id", "N. of Hours of Building Activity *" %>
 											<%= number_field_tag "business_hour", "0", placeholder: "N. of Hours of Building Activity", class: "form-control", min: "0" %>
 										</div>
-									 </div>
+									</div>
 								</fieldset>
-							<!-- FORM HYBRID -->
 
 							<!-- FORM RADIO BUTTON -->
 
@@ -190,7 +133,7 @@
 
 							<!-- FORM RADIO VALUE -->
 
-								<div class="row" style="margin-top: 130px;">
+								<div id="quote" class="row" style="margin-top: 130px;">
 									<div id="elevator-amount" class="col-md-4" style="display: flex; flex-direction: column; align-items: center;">
 										<%= label_tag  "name_id", "N. of Elevator" %>
 										<%= text_field_tag "ele_amount" %>
@@ -211,9 +154,9 @@
 										<%= label_tag  "name_id", "Final Price" %>
 										<%= text_field_tag "final_price" %>
 									</div>
-									<%# <div id="final-price" class="col-md-4" style="display: flex; flex-direction: column; align-items: center;">
-										<button type="button" class="btn btn-primary"><%=(link_to 'Save Quote', edit_quote_path)%></button>
-									</div> %>
+									<div id="final-price" class="col-md-4" style="display: flex; flex-direction: column; align-items: center;">
+										<%= link_to 'Submit', messages_path(@quote), method: :post, class: 'btn-submit' %>
+									</div>
 								</div>
 							</div>
 							</form>
