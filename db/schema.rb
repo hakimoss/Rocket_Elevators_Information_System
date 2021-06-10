@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 2021_06_09_174718) do
 
   create_table "quotes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "type_building"
+    t.string "building_type", limit: 25
     t.integer "number_appartement"
     t.integer "number_floor"
     t.integer "number_basement"
@@ -23,9 +23,7 @@ ActiveRecord::Schema.define(version: 2021_06_09_174718) do
     t.integer "number_corporate"
     t.integer "max_occupancy"
     t.integer "business_hour"
-    t.string "ele_standard"
-    t.string "ele_premium"
-    t.string "ele_excelium"
+    t.string "elevator_type", limit: 25
     t.integer "ele_amount"
     t.integer "ele_price_unit"
     t.integer "ele_total_price"
