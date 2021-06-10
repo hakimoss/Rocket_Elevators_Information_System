@@ -23,31 +23,6 @@
 
 							<h3 style="text-align: center;">A Work Faithful To The Wait</h3>
 
-							
-							<!--
-								MESSAGES
-								
-									How it works?
-									The form data is posted to php/contact.php where the fields are verified!
-									php.contact.php will redirect back here and will add a hash to the end of the URL:
-										#alert_success 		= email sent
-										#alert_failed		= email not sent - internal server error (404 error or SMTP problem)
-										#alert_mandatory	= email not sent - required fields empty
-										Hashes are handled by assets/js/contact.js
-
-									Form data: required to be an array. Example:
-										contact[email][required]  WHERE: [email] = field name, [required] = only if this field is required (PHP will check this)
-										Also, add `required` to input fields if is a mandatory field. 
-										Example: <input required type="email" value="" class="form-control" name="contact[email][required]">
-
-									PLEASE NOTE: IF YOU WANT TO ADD OR REMOVE FIELDS (EXCEPT CAPTCHA), JUST EDIT THE HTML CODE, NO NEED TO EDIT php/contact.php or javascript
-												 ALL FIELDS ARE DETECTED DINAMICALY BY THE PHP
-
-									WARNING! Do not change the `email` and `name`!
-												contact[name][required] 	- should stay as it is because PHP is using it for AddReplyTo (phpmailer)
-												contact[email][required] 	- should stay as it is because PHP is using it for AddReplyTo (phpmailer)
-							-->
-
 							<!-- Alert Success -->
 							<div id="alert_success" class="alert alert-success mb-30">
 								<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
@@ -155,7 +130,7 @@
 											<%= label_tag  "name_id", "N. of Occupancy by stage *" %>
 											<%= number_field_tag "corporateOccupancy", "0", placeholder: "DN. of Occupancy by stage", class: "form-control", min: "0" %>
 										</div>
-									 </div>
+									</div>
 							<!-- FORM CORPORATE -->
 							
 							<!-- FORM HYBRID -->
@@ -190,24 +165,25 @@
 
 							<!-- FORM RADIO BUTTON -->
 
-									<div style="margin-top: 50px;" class="priceShow">
-										Number of elevator shafts required : <span id="elevatorShafts">0</span>
-									</div>
+								<div style="margin-top: 50px;" class="priceShow">
+									Number of elevator shafts required : <span id="elevatorShafts">0</span>
+								</div>
 
 
-							<div id="building_prices" class="priceShow"> 
-								<div class="row" style="margin-top: 100px;">
-									<div class="col-md-4" style="display: flex; flex-direction: column; align-items: center;">
-										<%= label_tag  "name_id", "Standard" %>
-										<%= radio_button_tag "standard", "standard" %>
-									</div>
-									<div class="col-md-4" style="display: flex; flex-direction: column; align-items: center;">
-										<%= label_tag  "name_id", "Premium" %>
-										<%= radio_button_tag "premium", "premium" %>
-									</div>
-									<div class="col-md-4" style="display: flex; flex-direction: column; align-items: center;">
-										<label for="excelium">Excelium</label>
-										<input type="radio" id="excelium" name="variety" value="excelium">
+								<div id="building_prices" class="priceShow"> 
+									<div class="row" style="margin-top: 100px;">
+										<div class="col-md-4" style="display: flex; flex-direction: column; align-items: center;">
+											<%= label_tag  "name_id", "Standard" %>
+											<%= radio_button_tag "building_prices", "standard" %>
+										</div>
+										<div class="col-md-4" style="display: flex; flex-direction: column; align-items: center;">
+											<%= label_tag  "name_id", "Premium" %>
+											<%= radio_button_tag "building_prices", "premium" %>
+										</div>
+										<div class="col-md-4" style="display: flex; flex-direction: column; align-items: center;">
+											<%= label_tag  "name_id", "Excelium" %>
+											<%= radio_button_tag "building_prices", "premium" %>
+										</div>
 									</div>
 								</div>
 							<!-- FORM RADIO BUTTON -->
@@ -237,9 +213,9 @@
 									</div>
 								</div>
 							</div>
-								
 							</form>
 						</div>
+		</div>
 </div>
 							<!-- FORM RADIO VALUE -->
 					
