@@ -11,7 +11,7 @@
 #
 default: &default
   adapter: mysql2
-  database: Rocket_Elevators_Information_System_development@localhost
+  database: AbdelhakimAntar@localhost
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
   password: Hakima_1990
@@ -19,7 +19,7 @@ default: &default
 
 development:
   <<: *default
-  database: Rocket_Elevators_Information_System_development
+  database: AbdelhakimAntar
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
