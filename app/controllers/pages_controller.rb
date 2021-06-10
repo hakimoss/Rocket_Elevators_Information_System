@@ -5,7 +5,7 @@ class PagesController < ApplicationController
     end
 
     def quote
-
+        
     end
 
     def residential
