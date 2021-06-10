@@ -1,5 +1,6 @@
 
 
+
 //hide/show FORM
 
 $(document).ready(function () {
@@ -28,11 +29,11 @@ $(document).ready(function() {
 		if (selectedOption === 'residential') {
 			$("#residential").change(function(){
 
-				var residentialApp = $("#residentialApp").val()
-				var residentialFloor = $("#residentialFloor").val()
+				var number_appartement = $("#number_appartement").val()
+				var residentialFloor = $("#number_floor").val()
 				var resColumn = 1;
 
-				var averageResidential = residentialApp / residentialFloor
+				var averageResidential = number_appartement / residentialFloor
 				var resCage = (averageResidential  / 6) + 1 ;
 
 				if (residentialFloor >= 20){
@@ -59,7 +60,7 @@ $(document).ready(function() {
 
 		if (selectedOption === 'commercial') {
 			$("#commercial").change(function(){
-				var resultCommercial = $("#commercialElevator").val()
+				var resultCommercial = $("#number_elevator").val()
 				$("#elevatorShafts").text(resultCommercial);
 			  });
 		}
@@ -69,9 +70,12 @@ $(document).ready(function() {
 
 		if (selectedOption === 'corporate') {
 			$(".corporateChanger").change(function(){
-				var corporateMaxOccupancy = $("#corporateOccupancy").val();
-				var corporateFloor = $("#corporateFloor").val();
-				var corporateBasements = $("#corporateBasements").val();
+				var corporateMaxOccupancy = $("#max_occupancy").val();
+				var corporateFloor = $("#number_floor").val();
+				var corporateBasements = $("#number_basement").val();
+				console.log("corporateMaxOccupancy", corporateMaxOccupancy)
+				console.log("corporateFloor", corporateFloor)
+				console.log("corporateBasements", corporateBasements)
 
 				var totalOccupancy = corporateMaxOccupancy * (parseInt(corporateFloor) + parseInt(corporateBasements));
 				var elevator = totalOccupancy / 1000;
@@ -88,16 +92,16 @@ $(document).ready(function() {
 //						HYBRID	
 
 		if (selectedOption === 'hybrid') {
-			$(".hybridChanger").change(function(){
-				var hybridMaxOccupancy = $("#hybridOccupancy").val();
-				var hybridFloor = $("#hybridFloor").val();
-				var hybridBasements = $("#hybridBasements").val();
+			$("#hybrid").change(function(){
+				var MaxOccupancy = $("#max_occupancy").val();
+				var Floor = $("#number_floor").val();
+				var Basements = $("#number_basement").val();
 
-				var totalOccupancy = hybridMaxOccupancy * (parseInt(hybridFloor) + parseInt(hybridBasements));
-				var hybridElevator = totalOccupancy / 1000;
-				var hybridShaft = (parseInt(hybridFloor) + parseInt(hybridBasements)) / 20;
-				var averageShaft = hybridElevator / Math.round(hybridShaft)
-				var resultHybrid = Math.round(averageShaft) * Math.round(hybridShaft)
+				var totalOccupancy = MaxOccupancy * (parseInt(Floor) + parseInt(Basements));
+				var Elevator = totalOccupancy / 1000;
+				var Shaft = (parseInt(Floor) + parseInt(Basements)) / 20;
+				var averageShaft = Elevator / Math.round(Shaft)
+				var resultHybrid = Math.round(averageShaft) * Math.round(Shaft)
 
 				$("#elevatorShafts").text(Math.round(resultHybrid));
 			  });
@@ -117,49 +121,49 @@ $(document).ready(function() {
 //						STANDARD	
 
 		if (selectedRadio.val() === 'standard'){
-			elevatorUnitPrice = 7565
-			elevatorTotalPrice = $("#elevatorShafts").text() * elevatorUnitPrice
-			installationFees = Math.round(((elevatorTotalPrice * 10 / 100) + Number.EPSILON) * 100) / 100 
-			finalPrice = elevatorTotalPrice + installationFees
+			ele_price_unit = 7565
+			ele_total_price = $("#elevatorShafts").text() * ele_price_unit
+			inst_fee = Math.round(((ele_total_price * 10 / 100) + Number.EPSILON) * 100) / 100 
+			final_price = ele_total_price + inst_fee
 
-			$("#elevatorUnitPrice").val(elevatorUnitPrice.toLocaleString() + '$')
-			$("#elevatorTotalPrice").val(elevatorTotalPrice.toLocaleString() + '$')
-			$("#installationFees").val(installationFees.toLocaleString() + '$')
-			$("#finalPrice").val(finalPrice.toLocaleString() + '$')
+			$("#ele_price_unit").val(ele_price_unit.toLocaleString() + '$')
+			$("#ele_total_price").val(ele_total_price.toLocaleString() + '$')
+			$("#inst_fee").val(inst_fee.toLocaleString() + '$')
+			$("#final_price").val(final_price.toLocaleString() + '$')
 		}
 //						STANDARD	
 
 //						PREMIUM			
 		if (selectedRadio.val() === 'premium'){
-			elevatorUnitPrice = 12345
-			elevatorTotalPrice = $("#elevatorShafts").text() * elevatorUnitPrice
-			installationFees = Math.round(((elevatorTotalPrice * 13 / 100) + Number.EPSILON) * 100) / 100 
-			finalPrice = elevatorTotalPrice + installationFees
+			ele_price_unit = 12345
+			ele_total_price = $("#elevatorShafts").text() * ele_price_unit
+			inst_fee = Math.round(((ele_total_price * 13 / 100) + Number.EPSILON) * 100) / 100 
+			final_price = ele_total_price + inst_fee
 
-			$("#elevatorUnitPrice").val(elevatorUnitPrice.toLocaleString() + '$')
-			$("#elevatorTotalPrice").val(elevatorTotalPrice.toLocaleString() + '$')
-			$("#installationFees").val(installationFees.toLocaleString() + '$')
-			$("#finalPrice").val(finalPrice.toLocaleString() + '$')
+			$("#ele_price_unit").val(ele_price_unit.toLocaleString() + '$')
+			$("#ele_total_price").val(ele_total_price.toLocaleString() + '$')
+			$("#inst_fee").val(inst_fee.toLocaleString() + '$')
+			$("#final_price").val(final_price.toLocaleString() + '$')
 		}
 //						PREMIUM	
 
 //						EXCELIUM			
 		if (selectedRadio.val() === 'excelium'){
-			elevatorUnitPrice = 15400
-			elevatorTotalPrice = $("#elevatorShafts").text() * elevatorUnitPrice
-			installationFees = Math.round(((elevatorTotalPrice * 16 / 100) + Number.EPSILON) * 100) / 100 
-			finalPrice = elevatorTotalPrice + installationFees
+			ele_price_unit = 15400
+			ele_total_price = $("#elevatorShafts").text() * ele_price_unit
+			inst_fee = Math.round(((ele_total_price * 16 / 100) + Number.EPSILON) * 100) / 100 
+			final_price = ele_total_price + inst_fee
 
-			$("#elevatorUnitPrice").val(elevatorUnitPrice.toLocaleString() + '$')
-			$("#elevatorTotalPrice").val(elevatorTotalPrice.toLocaleString() + '$')
-			$("#installationFees").val(installationFees.toLocaleString() + '$')
-			$("#finalPrice").val(finalPrice.toLocaleString() + '$')
+			$("#ele_price_unit").val(ele_price_unit.toLocaleString() + '$')
+			$("#ele_total_price").val(ele_total_price.toLocaleString() + '$')
+			$("#inst_fee").val(inst_fee.toLocaleString() + '$')
+			$("#final_price").val(final_price.toLocaleString() + '$')
 			
 		}
 //						EXCELIUM		
 
 
-		$("#elevatorAmount").val($("#elevatorShafts").text())
+		$("#ele_amount").val($("#elevatorShafts").text())
 		
 	})
 
