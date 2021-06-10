@@ -26,7 +26,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
-
+gem 'bootsnap', '>=1.4.2', require: false
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 gem 'devise', '~> 4.2'
@@ -47,6 +47,11 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'capistrano', '~> 3.10', require: false
+  gem 'capistrano-rails', '~> 1.4', require: false
+  gem 'capistrano-bundler', '>= 1.1.0'
+  gem 'rvm1-capistrano3', require: false
+  gem 'capistrano3-puma'
 end
 
 group :test do
