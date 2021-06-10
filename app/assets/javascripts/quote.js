@@ -6,7 +6,7 @@ $(document).ready(function () {
     $('.building_type').hide();
     $('.priceShow').hide();
     
-    $('#building-type').change(function () {
+    $('#building_type').change(function () {
         $('.building_type').hide();
         $('.priceShow').show();
         $('#'+$(this).val()).show();
@@ -19,8 +19,8 @@ $(document).ready(function () {
 //				CALCULE
 
 $(document).ready(function() {
-	$("#building-type").change(function() {
-		var selectedOption = $("#building-type option:selected").val()
+	$("#building_type").change(function() {
+		var selectedOption = $("#building_type option:selected").val()
 		$("#elevatorShafts").text(0);
 		
 //						RESIDENTIAL		
@@ -111,8 +111,8 @@ $(document).ready(function() {
 
 
 
-	$("#building-prices").change(function() {
-		var selectedRadio = $("#building-prices input[type='radio']:checked");
+	$("#building_prices").change(function() {
+		var selectedRadio = $("#building_prices input[type='radio']:checked");
 		
 //						STANDARD	
 
