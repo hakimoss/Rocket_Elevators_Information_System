@@ -10,10 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_10_201914) do
+ActiveRecord::Schema.define(version: 2021_06_09_174718) do
 
   create_table "quotes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "type_building", limit: 25
+    t.string "type_building"
     t.integer "number_appartement"
     t.integer "number_floor"
     t.integer "number_basement"
@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 2021_06_10_201914) do
     t.integer "number_corporate"
     t.integer "max_occupancy"
     t.integer "business_hour"
-    t.string "ele_standard", limit: 25
+    t.string "elevator_type"
     t.integer "ele_amount"
     t.integer "ele_price_unit"
     t.integer "ele_total_price"
@@ -31,8 +31,6 @@ ActiveRecord::Schema.define(version: 2021_06_10_201914) do
     t.integer "final_price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.binary "ele_premium"
-    t.binary "ele_excelium"
   end
 
 end

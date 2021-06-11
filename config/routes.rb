@@ -4,12 +4,19 @@ Rails.application.routes.draw do
 
   root to: 'pages#home'
 
-  get '/quote', to: 'pages#quote'
+
 
   get '/residential', to: 'pages#residential'
   
   get '/commercial', to: 'pages#commercial'
 
+  get '/quote', to: 'pages#quote'
+
+  get '/quotes' => 'quote#index'
+
+  post '/quotes' => 'quotes#create'
+
+  get '/quotes/new' => 'quotes#new', as: 'new_quote'
 
 
 

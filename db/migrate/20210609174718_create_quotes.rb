@@ -11,9 +11,7 @@ class CreateQuotes < ActiveRecord::Migration[5.2]
       t.integer :number_corporate
       t.integer :max_occupancy
       t.integer :business_hour
-      t.string :ele_standard
-      t.string :ele_premium
-      t.string :ele_excelium
+      t.string :elevator_type
       t.integer :ele_amount
       t.integer :ele_price_unit
       t.integer :ele_total_price

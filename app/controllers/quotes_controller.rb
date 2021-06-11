@@ -4,6 +4,8 @@ class QuotesController < ApplicationController
   # GET /quotes or /quotes.json
   def index
     @quotes = Quote.all
+    @quotes = Quote.where(user_id: current_user).order("created_at DESC")
+    @user = current_user
   end
 
   # GET /quotes/1 or /quotes/1.json
@@ -21,6 +23,7 @@ class QuotesController < ApplicationController
 
   # POST /quotes or /quotes.json
   def create
+
     @quote = Quote.new(quote_params)
 
     respond_to do |format|
@@ -64,7 +67,7 @@ class QuotesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def quote_params
-      params.fetch(:quote, {})
+      params.require(:quote).permit(:building_type, :number_appartement, :number_floor, :number_basement, :number_compagny, :number_corporate, :number_elevator, :number_parking, :max_occupancy, :business_hour, :building_prices, :elevator_type, :ele_amount, :ele_price_unit, :ele_total_price, :inst_fee, :final_price)
     end
 
 
