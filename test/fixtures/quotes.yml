@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type_building: MyString
+  number_appartement: 1
+  number_floor: 1
+  number_basement: 1
+  number_compagny: 1
+  number_parking: 1
+  number_elevator: 1
+  number_corporate: 1
+  max_occupancy: 1
+  business_hour: 1
+  ele_standard: MyString
+  ele_premium: MyString
+  ele_excelium: MyString
+  ele_amount: 1
+  ele_price_unit: 1
+  ele_total_price: 1
+  inst_fee: 1
+  final_price: 1
+
+two:
+  type_building: MyString
+  number_appartement: 1
+  number_floor: 1
+  number_basement: 1
+  number_compagny: 1
+  number_parking: 1
+  number_elevator: 1
+  number_corporate: 1
+  max_occupancy: 1
+  business_hour: 1
+  ele_standard: MyString
+  ele_premium: MyString
+  ele_excelium: MyString
+  ele_amount: 1
+  ele_price_unit: 1
+  ele_total_price: 1
+  inst_fee: 1
+  final_price: 1
