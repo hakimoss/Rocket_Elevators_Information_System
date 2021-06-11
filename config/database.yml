@@ -14,7 +14,7 @@ default: &default
   database: Rocket_Elevators_Information_System_development@localhost
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
-  password: Hakima_1990
+  password: Raptor700$
   socket: /var/run/mysqld/mysqld.sock
 
 development:
@@ -50,7 +50,7 @@ test:
 production:
   <<: *default
   encoding: utf8
-  database: Rocket_Elevators_Information_System_production
+  database: Rocket_Elevators_Information_production
   database: <%= ENV['RDS_DB_NAME'] %>
   username: <%= ENV['RDS_USERNAME'] %>
   password: <%= ENV['RDS_PASSWORD'] %>

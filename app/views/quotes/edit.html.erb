@@ -1,0 +1,10 @@
+<h1>Editing Quote</h1>
+
+
+<%= form_tag(quote_path)%>
+    <%= submit_tag 'Save Quote', new_quote_path(@quote), method: :post %>
+<% end %>
+<%= render 'form', quote: @quote %>
+
+<%= link_to 'Show', @quote %> |
+<%= link_to 'Back', quotes_path %>
