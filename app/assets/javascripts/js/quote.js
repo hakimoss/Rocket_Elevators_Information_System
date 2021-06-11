@@ -28,17 +28,6 @@ $(document).ready(function() {
 		$("#elevatorShafts").text(0);
 
 		if (selectedOption === 'select') {
-			$('#number_appartement').remove();
-			$('#number_floor').remove();
-			$('#number_basement').remove();
-			$('#number_elevator').remove();
-			$('#number_compagny').remove();
-			$('#number_corporate').remove();
-			$('#number_parking').remove();
-			$('#max_occupancy').remove();
-			$('#business_hour').remove();
-			$('.priceShow').remove();
-			$('#quote').remove();
 			$('#number-of-apartments').hide();
 			$('#number-of-floors').hide();
 			$('#number-of-basements').hide();
@@ -49,29 +38,49 @@ $(document).ready(function() {
 			$('#maximum-occupancy').hide();
 			$('#business-hours').hide();
 			$('.priceShow').hide();
-			$('#quote').show();
+			$('#quote').hide();
+			$('#number_appartement').val('');
+			$('#number_floor').val('');
+			$('#number_basement').val('');
+			$('#number_elevator').val('');
+			$('#number_compagny').val('');
+			$('#number_corporate').val('');
+			$('#number_parking').val('');
+			$('#max_occupancy').val('');
+			$('#business_hour').val('');
 		}
 		
 //						RESIDENTIAL		
 		
 		if (selectedOption === 'residential') {
-				$('#number-of-apartments').show();
-				$('#number-of-floors').show();
-				$('#number-of-basements').show();
-				$('#number-of-elevators').hide();
-				$('#number-of-companies').hide();
-				$('#number-of-corporations').hide();
-				$('#number-of-parking-spots').hide();
-				$('#maximum-occupancy').hide();
-				$('#business-hours').hide();
-				$('.priceShow').show();
-				$('#quote').show();
+			$('#number-of-apartments').show();
+			$('#number-of-floors').show();
+			$('#number-of-basements').show();
+			$('#number-of-elevators').hide();
+			$('#number-of-companies').hide();
+			$('#number-of-corporations').hide();
+			$('#number-of-parking-spots').hide();
+			$('#maximum-occupancy').hide();
+			$('#business-hours').hide();
+			$('.priceShow').show();
+			$('#quote').show();
+			$('#number_appartement').val('');
+			$('#number_floor').val('');
+			$('#number_basement').val('');
+			$('#number_elevator').val('');
+			$('#number_compagny').val('');
+			$('#number_corporate').val('');
+			$('#number_parking').val('');
+			$('#max_occupancy').val('');
+			$('#business_hour').val('');
 
-			$("#residential").change(function(){
+			$("#div").change(function(){
 
 				var number_appartement = $("#number_appartement").val()
 				var residentialFloor = $("#number_floor").val()
 				var resColumn = 1;
+				console.log("number_appartement", number_appartement)
+				console.log("residentialFloor", residentialFloor)
 
 				var averageResidential = number_appartement / residentialFloor
 				var resCage = (averageResidential  / 6) + 1 ;
@@ -110,9 +119,19 @@ $(document).ready(function() {
 			$('#business-hours').hide();
 			$('.priceShow').show();
 			$('#quote').show();
+			$('#number_appartement').val('');
+			$('#number_floor').val('');
+			$('#number_basement').val('');
+			$('#number_elevator').val('');
+			$('#number_compagny').val('');
+			$('#number_corporate').val('');
+			$('#number_parking').val('');
+			$('#max_occupancy').val('');
+			$('#business_hour').val('');
 
-			$("#commercial").change(function(){
+			$("#div").change(function(){
 				var resultCommercial = $("#number_elevator").val()
+				console.log("resultCommercial", resultCommercial)
 				$("#elevatorShafts").text(resultCommercial);
 			});
 		}
@@ -131,8 +150,17 @@ $(document).ready(function() {
 			$('#business-hours').hide();
 			$('.priceShow').show();
 			$('#quote').show();
+			$('#number_appartement').val('');
+			$('#number_floor').val('');
+			$('#number_basement').val('');
+			$('#number_elevator').val('');
+			$('#number_compagny').val('');
+			$('#number_corporate').val('');
+			$('#number_parking').val('');
+			$('#max_occupancy').val('');
+			$('#business_hour').val('');
 
-			$(".corporateChanger").change(function(){
+			$("#div").change(function(){
 				var corporateMaxOccupancy = $("#max_occupancy").val();
 				var corporateFloor = $("#number_floor").val();
 				var corporateBasements = $("#number_basement").val();
@@ -166,11 +194,23 @@ $(document).ready(function() {
 			$('#business-hours').show();
 			$('.priceShow').show();
 			$('#quote').show();
+			$('#number_appartement').val('');
+			$('#number_floor').val('');
+			$('#number_basement').val('');
+			$('#number_elevator').val('');
+			$('#number_compagny').val('');
+			$('#number_corporate').val('');
+			$('#number_parking').val('');
+			$('#max_occupancy').val('');
+			$('#business_hour').val('');
 
-			$(".hybridChanger").change(function(){
+			$("#div").change(function(){
 				var MaxOccupancy = $("#max_occupancy").val();
 				var Floor = $("#number_floor").val();
 				var Basements = $("#number_basement").val();
+				console.log("MaxOccupancy", MaxOccupancy)
+				console.log("Floor", Floor)
+				console.log("Basements", Basements)
 
 				var totalOccupancy = MaxOccupancy * (parseInt(Floor) + parseInt(Basements));
 				var Elevator = totalOccupancy / 1000;
