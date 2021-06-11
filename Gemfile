@@ -15,7 +15,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
-gem 'bootstrap', '~> 5.0.1'
+
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -49,6 +49,11 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'capistrano', '~> 3.10', require: false
+  gem 'capistrano-rails', '~> 1.4', require: false
+  gem 'capistrano-bundler', '>= 1.1.0'
+  gem 'rvm1-capistrano3', require: false
+  gem 'capistrano3-puma'
 end
 
 group :test do
@@ -62,6 +67,8 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem 'jquery-rails'
-gem 'bootstrap-sass'
+
+gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
+gem 'rails-ujs', '~> 0.1.0'
+
 gem 'font-awesome-rails'

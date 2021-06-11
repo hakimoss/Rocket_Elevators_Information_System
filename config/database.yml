@@ -11,7 +11,7 @@
 #
 default: &default
   adapter: mysql2
-  database: Rocket_Elevators_Information_System_development
+  database: Rocket_Elevators_Information_System_development@localhost
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
   password: Windynumber22
@@ -58,3 +58,4 @@ production:
   port: <%= ENV['RDS_PORT'] %>
   username: Rocket_Elevators_Information_System
   password: <%= ENV['ROCKET_ELEVATORS_INFORMATION_SYSTEM_DATABASE_PASSWORD'] %>
+
