@@ -110,7 +110,7 @@
 								submenu-dark = dark sub menu
 							-->
 					
-							<div id="home" class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
+							<div id="home" class="navbar-collapse collapse float-right nav-main-collapse submenu-dark" >
 								<nav class="nav-main">
 
 									<!-- 
@@ -121,6 +121,7 @@
 									-->
 									
 									<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
+										
 										<li class="active"><!-- HOME -->
 											<a id="home-nav" href="#" style="display: flex; align-items: center;">
 												HOME
@@ -154,16 +155,27 @@
 												CONTACT
 											</a>
 										</li>
-										<li style="display: flex; text-align: center;">
+									
+										
 											<% if user_signed_in? %>
-												<button class="button"><%= link_to('Logout', destroy_user_session_path, :method => :delete)%></button>
+												<li class="nav-link dropdown-toggle" style="display: flex; align-items: center; margin-left: 100px;">
+													<button class="button"><%= link_to('Logout', destroy_user_session_path, :method => :delete)%></button>
+												</li>
 											<% elsif !user_signed_in? %>
-												<p class="sign_in"><%= link_to 'Login', new_user_session_path %></p>
-												<p class="sign_up"><%= link_to 'Sign Up', new_user_registration_path %></p>
+										
+												<li class="nav-item dropdown" style="margin-left: 100px"><!-- ACCOUNT -->
+													<a class="nav-link dropdown-toggle" id="btnAccount" data-bs-toggle="dropdown" style="display: flex; align-items: center;">ACCOUNT </a>
+													<ul class="dropdown-menu bg-white" style="border: none;">
+													<li><a class="dropdown-item" style="color: black;" <%= link_to 'Login', new_user_session_path %> </a></li>
+													<li><a class="dropdown-item"  style="color: black;" <%= link_to 'Sign Up', new_user_registration_path %>  </a></li>
+													<%# <li><a class="dropdown-item" href="./quote" style="color: black;" >GET QUOTE</a></li> %>
+													</ul>
+												</li>
 											<% end %>		
-										</li>
-
+								
 									</ul>
+									
+
 								</div>
 
 								</nav>
