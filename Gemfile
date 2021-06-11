@@ -30,6 +30,8 @@ gem 'bootsnap', '>=1.4.2', require: false
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 gem 'devise', '~> 4.2'
+gem 'cancancan'
+gem 'rails_admin', '~> 2.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 # Reduces boot times through caching; required in config/boot.rb
