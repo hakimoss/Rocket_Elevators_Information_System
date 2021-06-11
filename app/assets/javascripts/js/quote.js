@@ -79,8 +79,6 @@ $(document).ready(function() {
 				var number_appartement = $("#number_appartement").val()
 				var residentialFloor = $("#number_floor").val()
 				var resColumn = 1;
-				console.log("number_appartement", number_appartement)
-				console.log("residentialFloor", residentialFloor)
 
 				var averageResidential = number_appartement / residentialFloor
 				var resCage = (averageResidential  / 6) + 1 ;
@@ -164,9 +162,6 @@ $(document).ready(function() {
 				var corporateMaxOccupancy = $("#max_occupancy").val();
 				var corporateFloor = $("#number_floor").val();
 				var corporateBasements = $("#number_basement").val();
-				console.log("corporateMaxOccupancy", corporateMaxOccupancy)
-				console.log("corporateFloor", corporateFloor)
-				console.log("corporateBasements", corporateBasements)
 
 				var totalOccupancy = corporateMaxOccupancy * (parseInt(corporateFloor) + parseInt(corporateBasements));
 				var elevator = totalOccupancy / 1000;
@@ -208,9 +203,6 @@ $(document).ready(function() {
 				var MaxOccupancy = $("#max_occupancy").val();
 				var Floor = $("#number_floor").val();
 				var Basements = $("#number_basement").val();
-				console.log("MaxOccupancy", MaxOccupancy)
-				console.log("Floor", Floor)
-				console.log("Basements", Basements)
 
 				var totalOccupancy = MaxOccupancy * (parseInt(Floor) + parseInt(Basements));
 				var Elevator = totalOccupancy / 1000;
