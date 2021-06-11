@@ -1,0 +1,25 @@
+<h1>Employee#show</h1>
+
+<%= form_for :employee, class: 'from-horizontal' do |f| %>
+
+  <div class="form-groupe">
+    <%= f.label :user_id %><br />
+    <%= f.text_field :user_id, autofocus: true, autocomplete: "user_id" %>
+  </div>
+
+  <div class="form-groupe">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name, autofocus: true, autocomplete: "last_name" %>
+  </div>
+
+  <div class="form-groupe">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name, autofocus: true, autocomplete: "first_name" %>
+  </div>
+
+  <div class="form-groupe">
+    <%= f.label :title %><br />
+    <%= f.text_field :title, autocomplete: "title" %>
+  </div>
+
+<% end %>

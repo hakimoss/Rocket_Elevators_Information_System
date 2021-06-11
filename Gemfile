@@ -29,8 +29,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>=1.4.2', require: false
 # Use ActiveStorage variant
 gem 'devise', '~> 4.2'
-
-# gem 'mini_magick', '~> 4.8'
+gem 'cancancan'
+gem 'rails_admin', '~> 2.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -67,6 +67,8 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem 'jquery-rails'
-gem 'bootstrap-sass'
+
+gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
+gem 'rails-ujs', '~> 0.1.0'
+
 gem 'font-awesome-rails'
