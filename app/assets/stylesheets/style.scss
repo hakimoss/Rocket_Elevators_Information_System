@@ -1,0 +1,37 @@
+
+#servicesHeight200 {
+    height: 200px;
+    width: 100%;
+}
+
+#portfolioHeight189 {
+    height: 189.5px;
+
+}
+
+#newsHeight175 {
+    height: 175px;
+}
+
+#ctnWhite {
+    background-color: #f1f1f1;
+}
+
+/*///////////////// BUTTON //////////////////*/
+
+.growHover:hover {
+    transform: scale(1.05);
+    background-color: #dc3545;
+    transition: 0.7s;
+}
+#servicesFlex {
+    display: flex;
+    align-items: center;
+    width: 115px
+}
+
+.colorHover:hover {
+    background-color: #1265a8;
+    transition: 0.7s;
+
+}

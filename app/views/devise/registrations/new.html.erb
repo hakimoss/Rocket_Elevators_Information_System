@@ -1,28 +1,48 @@
-<h2>Sign up</h2>
+<div class="container">
+  <div class="heading-title heading-dotted text-center">
+    <h2>Sign up</h2>
+  </div>
+<div style="display: flex; flex-direction: column; margin-left: 35%">
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :email %><br />
+  <div class="field row" >
+    <span class="col-md-2"> 
+      <%= f.label :email %><br />
+   </span> 
+   <span class="col-md-4">
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+   </span> 
   </div>
 
-  <div class="field">
-    <%= f.label :password %>
+  <div class="field row" >
+    <span class="col-md-2"> 
+      <%= f.label :password %>
+    </span> 
+    <span class="col-md-4">
+      <%= f.password_field :password, autocomplete: "new-password" %>
+    </span>
     <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
   </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  <div class="field row" >
+    <span class="col-md-2"> 
+      <%= f.label :password_confirmation %><br />
+    </span> 
+    <span class="col-md-4">
+      <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    </span>
   </div>
 
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
 <% end %>
+
 <%= render "devise/shared/links" %>
+ </div>
+
+</div>

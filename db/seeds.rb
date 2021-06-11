@@ -30,6 +30,6 @@ employee_list = [
 ]
 
 employee_list.each do | last_name, first_name, title, email|
-    Employee.create(user_id: 3, last_name: last_name, first_name: first_name, title: title, email: email)
+    Employee.create!(user_id: 1, last_name: last_name, first_name: first_name, title: title, email: email)
 
 end    
