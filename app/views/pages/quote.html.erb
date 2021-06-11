@@ -48,7 +48,7 @@
 							
 							<!-- FORM QUOTE -->
 							
-							<form action="/quote" method="post" enctype="multipart/form-data">
+							<%= form_tag(@Quote) do |f| %>
 								<fieldset>
 									<input type="hidden" name="action" value="contact_send" />
 
@@ -117,15 +117,15 @@
 									<div class="row" style="margin-top: 100px;">
 										<div class="col-md-4" style="display: flex; flex-direction: column; align-items: center;">
 											<%= label_tag  "name_id", "Standard" %>
-											<%= radio_button_tag "building_prices", "standard" %>
+											<%= radio_button_tag "elevator_type", "standard" %>
 										</div>
 										<div class="col-md-4" style="display: flex; flex-direction: column; align-items: center;">
 											<%= label_tag  "name_id", "Premium" %>
-											<%= radio_button_tag "building_prices", "premium" %>
+											<%= radio_button_tag "elevator_type", "premium" %>
 										</div>
 										<div class="col-md-4" style="display: flex; flex-direction: column; align-items: center;">
 											<%= label_tag  "name_id", "Excelium" %>
-											<%= radio_button_tag "building_prices", "excelium" %>
+											<%= radio_button_tag "elevator_type", "excelium" %>
 										</div>
 									</div>
 								</div>
@@ -155,10 +155,10 @@
 										<%= text_field_tag "final_price" %>
 									</div>
 									<div id="final-price" class="col-md-4" style="display: flex; flex-direction: column; align-items: center;">
-										<%= link_to 'Save Quote', quotes_path(@quote), method: :post, class: 'btn-submit' %>
+										<%= submit_tag "Save Quote" %>
 									</div>
 								</div>
-							</form>
+							<%end%>
 						</div>
 		</div>
 </div>

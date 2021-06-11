@@ -222,8 +222,8 @@ $(document).ready(function() {
 
 
 
-	$("#building_prices").change(function() {
-		var selectedRadio = $("#building_prices input[type='radio']:checked");
+	$("#elevator_type").change(function() {
+		var selectedRadio = $("#elevator_type input[type='radio']:checked");
 		
 //						STANDARD	
 
