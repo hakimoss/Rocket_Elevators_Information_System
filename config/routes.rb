@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'employee/show'
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users, controllers: { registrations: "users/registrations", sessions: "users/sessions" }
  
 
@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   get '/residential', to: 'pages#residential'
   
   get '/commercial', to: 'pages#commercial'
+
+  get 'employee/show'
 
   devise_scope :user do
     get '/signout', to: 'devise/sessions#destroy', as: :signout
