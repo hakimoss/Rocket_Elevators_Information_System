@@ -163,6 +163,9 @@
 														<li><a class="dropdown-item" ><%= link_to('Logout', destroy_user_session_path,  :method => :delete, :style=>'color: black;' )%> </a></li>
 													</ul>
 												</li>
+												<% if current_user.superadmin_role? || current_user.supervisor_role? %>
+													<li><a class="dropdown-item" style="color: black;" <%= link_to 'Admin', rails_admin_path %> </a></li>
+												<% end %>
 											<% elsif !user_signed_in? %>
 										
 												<li class="nav-item dropdown" style="margin-left: 100px"><!-- ACCOUNT -->
