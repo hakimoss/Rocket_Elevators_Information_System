@@ -15,8 +15,6 @@ Rails.application.routes.draw do
 
   get '/quote', to: 'pages#quote'
 
-  get '/quotes' => 'quote#index'
-
   post '/quotes' => 'quotes#create'
 
   get '/quotes/new' => 'quotes#new', as: 'new_quote'

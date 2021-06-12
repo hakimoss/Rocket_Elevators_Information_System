@@ -10,6 +10,7 @@ class QuotesController < ApplicationController
 
   # GET /quotes/1 or /quotes/1.json
   def show
+    @quote = Quote.find(params[:id])
   end
 
   # GET /quotes/new
