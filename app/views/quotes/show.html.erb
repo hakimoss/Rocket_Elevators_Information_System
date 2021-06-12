@@ -1,4 +1,77 @@
 <p id="notice"><%= notice %></p>
 
+<p>
+  <strong>Number of Appartement</strong>
+  <%= @quote.number_appartement %>
+</p>
+
+
+<div>
+  <strong>Number of Floor</strong>
+  <%= @quote.number_floor %>
+</div>
+
+<div>
+  <strong>Number of Basement</strong>
+  <%= @quote.number_basement %>
+</div>
+
+<div>
+  <strong>Number of Compagny</strong>
+  <%= @quote.number_compagny %>
+</div>
+
+<div>
+  <strong>Number of Corporate</strong>
+  <%= @quote.number_corporate %>
+</div>
+
+<div>
+  <strong>Number of Elevator</strong>
+  <%= @quote.number_elevator %>
+</div>
+
+<div>
+  <strong>Number of Parking</strong>
+  <%= @quote.number_parking %>
+</div>
+
+<div>
+  <strong>Max of Occupancy</strong>
+  <%= @quote.max_occupancy %>
+</div>
+
+<div>
+  <strong>Business Hour</strong>
+  <%= @quote.business_hour %>
+</div>
+
+<div>
+  <strong>Elevator Amount</strong>
+  <%= @quote.ele_amount %>
+</div>
+
+<div>
+  <strong>Elevator Unit Price</strong>
+  <%= @quote.ele_price_unit %>
+</div>
+
+<div>
+  <strong>Elevator Total Price</strong>
+  <%= @quote.ele_total_price %>
+</div>
+
+<div>
+  <strong>Installation Fee</strong>
+  <%= @quote.inst_fee %>
+</div>
+
+<div>
+  <strong>Final Price</strong>
+  <%= @quote.final_price %>
+</div>
+
+
+
 <%= link_to 'Edit', edit_quote_path(@quote) %> |
 <%= link_to 'Back', quotes_path %>

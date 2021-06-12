@@ -47,8 +47,7 @@
 
 							
 							<!-- FORM QUOTE -->
-							
-							<%= form_tag(@quote) do |f| %>
+							<%= form_with(model: @Quote, local: true, :method => "post") do |form| %>
 								<fieldset>
 									<input type="hidden" name="action" value="contact_send" />
 
@@ -162,7 +161,7 @@
 						</div>
 		</div>
 </div>
-							<!-- FORM RADIO VALUE -->
+						<!-- FORM RADIO VALUE -->
 					
 
 						<!-- FORM QUOTE -->

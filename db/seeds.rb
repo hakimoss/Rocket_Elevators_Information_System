@@ -28,8 +28,9 @@ employee_list = [
     [ "Krista", "Sheely", "Developer", "krista.sheely@codeboxx.biz" ],
     [ "Jonathan", "Murray", "Developer", "jonathan.murray@codeboxx.biz" ]
 ]
+i = 1
 
 employee_list.each do | last_name, first_name, title, email|
-    Employee.create!(user_id: 1, last_name: last_name, first_name: first_name, title: title, email: email)
-
+    Employee.create!(user_id: i, last_name: last_name, first_name: first_name, title: title, email: email)
+    i = i + 1
 end    
