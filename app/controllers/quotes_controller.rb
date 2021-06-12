@@ -4,8 +4,6 @@ class QuotesController < ApplicationController
   # GET /quotes or /quotes.json
   def index
     @quotes = Quote.all
-    @quotes = Quote.where(user_id: current_user).order("created_at DESC")
-    @user = current_user
   end
 
   # GET /quotes/1 or /quotes/1.json
