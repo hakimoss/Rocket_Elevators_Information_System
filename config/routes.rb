@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'company/new'
+  get 'company/create'
   get 'addresses/new'
   get 'addresses/create'
   get 'leads/new'
