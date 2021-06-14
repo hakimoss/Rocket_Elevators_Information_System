@@ -34,6 +34,21 @@ ActiveRecord::Schema.define(version: 2021_06_14_163707) do
     t.string "email"
   end
 
+  create_table "leads", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "full_name_of_the_contact"
+    t.string "company_name"
+    t.string "email"
+    t.integer "phone"
+    t.string "project_name"
+    t.string "project_description"
+    t.string "department_in_charge_of_the_elevators"
+    t.string "message"
+    t.binary "attached_file_stored_as_a_binary_file"
+    t.date "date_of_the_contact_request"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "quotes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "type_building"
     t.integer "number_appartement"

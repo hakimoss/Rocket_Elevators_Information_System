@@ -1,3 +1,5 @@
+<h1>Contact Us</h1>
+<p>Find me in app/views/leads/create.html.erb</p>
 
 
 
@@ -47,60 +49,47 @@
 
 							
 							<!-- FORM QUOTE -->
-							<%= form_with(model: @Quote, local: true, :method => "post") do |form| %>
+						
 								<fieldset>
 									<input type="hidden" name="action" value="contact_send" />
 
-									<div class="row">
-										<div class="col-md-12">
-											<label for="contact_department">Department</label>
-											
-											<select id="building_type" class="form-control pointer" name="contact[department]">
-												<option value="select">--- Select ---</option>
-												<option value="residential">Residential</option>
-												<option value="commercial">Commercial</option>
-												<option value="corporate">Corporate</option>
-												<option value="hybrid">Hybrid</option>
-											</select>
-										</div>
-									</div>
-
+									
 									<div id="div">
 										<div id="number-of-apartments" class="col-md-4">
-											<%= label_tag  "name_id", "N. of Appartements *" %>
-											<%= number_field_tag "number_appartement", "0", placeholder: "N. of Appartements", class: "form-control", min: "0" %>
+                                            <%= form.label :number_appartement %>
+                                            <%= form.text_field :number_appartement, id: 'number_appartement' %>
 										</div>
 										<div id="number-of-floors" class="col-md-4">
-											<%= label_tag  "name_id", "N. of Floor *" %>
-											<%= number_field_tag "number_floor", "0", placeholder: "N. of Floor", class: "form-control", min: "0" %>
+                                            <%= form.label :number_floor %>
+                                            <%= form.text_field :number_floor, id: 'number_floor' %>
 										</div>
 										<div id="number-of-basements" class="col-md-4">
-											<%= label_tag  "name_id", "N. of Basements *" %>
-											<%= number_field_tag "number_basement", "0", placeholder: "N. of Basements", class: "form-control", min: "0" %>
+                                            <%= form.label :number_basement %>
+                                            <%= form.text_field :number_basement, id: 'number_basement' %>
 										</div>
 										<div id="number-of-companies" class="col-md-4">
-											<%= label_tag  "name_id", "N. of Compagnies *" %>
-											<%= number_field_tag "number_compagny", "0", placeholder: "N. of Compagnies", class: "form-control", min: "0" %>
+                                            <%= form.label :number_compagny %>
+                                            <%= form.text_field :number_compagny, id: 'number_compagny' %>
 										</div>
 										<div id="number-of-corporations" class="col-md-4">
-											<%= label_tag  "name_id", "N. of Corporate *" %>
-											<%= number_field_tag "number_corporate", "0", placeholder: "N. of Corporate", class: "form-control", min: "0" %>
+                                            <%= form.label :number_corporate %>
+                                            <%= form.text_field :number_corporate, id: 'number_corporate' %>
 										</div>
 										<div id="number-of-elevators" class="col-md-4">
-											<%= label_tag  "name_id", "N. of Elevator Cages *" %>
-											<%= number_field_tag "number_elevator", "0", placeholder: "N. of Elevator Cages", class: "form-control", min: "0" %>
+                                            <%= form.label :number_elevator %>
+                                            <%= form.text_field :number_elevator, id: 'number_elevator' %>					
 										</div>
 										<div id="number-of-parking-spots" class="col-md-4">
-											<%= label_tag  "name_id", "N. of Parking Spots *" %>
-											<%= number_field_tag "number_parking", "0", placeholder: "N. of Parking Spots", class: "form-control", min: "0" %>
+                                            <%= form.label :number_parking %>
+                                            <%= form.text_field :number_parking, id: 'number_parking' %>
 										</div>
 										<div id="maximum-occupancy" class="corporateChanger col-md-4">
-											<%= label_tag  "name_id", "N. of Occupancy by stage *" %>
-											<%= number_field_tag "max_occupancy", "0", placeholder: "N. of Occupancy by stage", class: "form-control", min: "0" %>
+                                            <%= form.label :max_occupancy %>
+                                            <%= form.text_field :max_occupancy, id: 'max_occupancy' %>				
 										</div>
 										<div id="business-hours" class="col-md-4">
-											<%= label_tag  "name_id", "N. of Hours of Building Activity *" %>
-											<%= number_field_tag "business_hour", "0", placeholder: "N. of Hours of Building Activity", class: "form-control", min: "0" %>
+                                            <%= form.label :business_hour %>
+                                            <%= form.text_field :business_hour, id: 'business_hour' %>							
 										</div>
 									</div>
 								</fieldset>
@@ -115,16 +104,16 @@
 								<div id="elevator_type" class="priceShow"> 
 									<div class="row" style="margin-top: 100px;">
 										<div class="col-md-4" style="display: flex; flex-direction: column; align-items: center;">
-											<%= label_tag  "name_id", "Standard" %>
-											<%= radio_button_tag "elevator_type", "standard" %>
+                                            <%= form.label :Standard %>
+                                            <%= form.radio_button :elevator_type, 'standard' %>
 										</div>
 										<div class="col-md-4" style="display: flex; flex-direction: column; align-items: center;">
-											<%= label_tag  "name_id", "Premium" %>
-											<%= radio_button_tag "elevator_type", "premium" %>
+                                            <%= form.label :Premium %>
+                                            <%= form.radio_button :elevator_type, 'premium' %>
 										</div>
 										<div class="col-md-4" style="display: flex; flex-direction: column; align-items: center;">
-											<%= label_tag  "name_id", "Excelium" %>
-											<%= radio_button_tag "elevator_type", "excelium" %>
+                                            <%= form.label :Excelium %>
+                                            <%= form.radio_button :elevator_type, 'excelium' %>
 										</div>
 									</div>
 								</div>
@@ -134,34 +123,31 @@
 
 								<div id="quote" class="row" style="margin-top: 130px;">
 									<div id="elevator-amount" class="col-md-4" style="display: flex; flex-direction: column; align-items: center;">
-										<%= label_tag  "name_id", "N. of Elevator" %>
-										<%= text_field_tag "ele_amount" %>
+                                        <%= form.label :ele_amount %>
+                                        <%= form.text_field :ele_amount, id: 'ele_amount' %>
 									</div>
 									<div id="elevator-unit-price" class="col-md-4" style="display: flex; flex-direction: column; align-items: center;">
-										<%= label_tag  "name_id", "Elevator Unit Price" %>
-										<%= text_field_tag "ele_price_unit" %>
+                                        <%= form.label :ele_price_unit %>
+                                        <%= form.text_field :ele_price_unit, id: 'ele_price_unit' %>
 									</div>
 									<div id="elevator-total-price" class="col-md-4" style="display: flex; flex-direction: column; align-items: center;">
-										<%= label_tag  "name_id", "Elevator Total Price" %>
-										<%= text_field_tag "ele_total_price" %>
+                                        <%= form.label :ele_total_price %>
+                                        <%= form.text_field :ele_total_price, id: 'ele_total_price' %>
 									</div>
 									<div id="installation-fees" class="col-md-4" style="display: flex; flex-direction: column; align-items: center;">
-										<%= label_tag  "name_id", "Installation Fees" %>
-										<%= text_field_tag "inst_fee" %>
+                                        <%= form.label :inst_fee %>
+                                        <%= form.text_field :inst_fee, id: 'inst_fee' %>
 									</div>
 									<div id="final-price" class="col-md-4" style="display: flex; flex-direction: column; align-items: center;">
-										<%= label_tag  "name_id", "Final Price" %>
-										<%= text_field_tag "final_price" %>
+                                        <%= form.label :final_price %>
+                                        <%= form.text_field :final_price, id: 'final_price' %>
 									</div>
-									<div id="final-price" class="col-md-4" style="display: flex; flex-direction: column; align-items: center;">
-										<%= submit_tag "Save Quote" %>
-									</div>
+									<div class="actions">
+                                        <%= form.submit %>
+                                    </div>
 								</div>
-							<%end%>
+				
 						</div>
 		</div>
 </div>
-						<!-- FORM RADIO VALUE -->
-					
-
-						<!-- FORM QUOTE -->
+						<!-- FORM RADIO
