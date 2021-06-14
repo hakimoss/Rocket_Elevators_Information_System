@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'company/new'
+  get 'company/create'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users, controllers: { registrations: "users/registrations", sessions: "users/sessions" }
   resources :quotes

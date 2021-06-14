@@ -142,7 +142,8 @@ $(document).ready(function() {
 			$('#number-of-floors').show();
 			$('#number-of-basements').show();
 			$('#number-of-elevators').hide();
-			$('#number-of-companies').show();
+			$('#number-of-companies').hide();
+			$('#number-of-corporations').show();
 			$('#number-of-parking-spots').show();
 			$('#maximum-occupancy').show();
 			$('#business-hours').hide();

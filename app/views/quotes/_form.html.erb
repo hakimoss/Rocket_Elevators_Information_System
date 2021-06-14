@@ -79,49 +79,40 @@
 									<div id="div">
                     
 										<div id="number-of-apartments" class="col-md-4">
-                      <%= form.label :number_appartement %>
-                      <%= form.text_field :number_appartement, id: 'number_appartement' %>
-
+											<%= form.label :number_appartement %>
+											<%= form.text_field :number_appartement, id: 'number_appartement' %>
 										</div>
 										<div id="number-of-floors" class="col-md-4">
-                    <%= form.label :number_floor %>
-                      <%= form.text_field :number_floor, id: 'number_floor' %>
-
+											<%= form.label :number_floor %>
+											<%= form.text_field :number_floor, id: 'number_floor' %>
 										</div>
 										<div id="number-of-basements" class="col-md-4">
-                     <%= form.label :number_basement %>
-                      <%= form.text_field :number_basement, id: 'number_basement' %>
-		
+											<%= form.label :number_basement %>
+											<%= form.text_field :number_basement, id: 'number_basement' %>
 										</div>
 										<div id="number-of-companies" class="col-md-4">
-                     <%= form.label :number_compagny %>
-                      <%= form.text_field :number_compagny, id: 'number_compagny' %>
-
+											<%= form.label :number_compagny %>
+											<%= form.text_field :number_compagny, id: 'number_compagny' %>
 										</div>
 										<div id="number-of-corporations" class="col-md-4">
-                     <%= form.label :number_corporate %>
-                      <%= form.text_field :number_corporate, id: 'number_corporate' %>
-
+											<%= form.label :number_corporate %>
+											<%= form.text_field :number_corporate, id: 'number_corporate' %>
 										</div>
 										<div id="number-of-elevators" class="col-md-4">
-                     <%= form.label :number_elevator %>
-                      <%= form.text_field :number_elevator, id: 'number_elevator' %>
-					
+											<%= form.label :number_elevator %>
+											<%= form.text_field :number_elevator, id: 'number_elevator' %>
 										</div>
 										<div id="number-of-parking-spots" class="col-md-4">
-                     <%= form.label :number_parking %>
-                      <%= form.text_field :number_parking, id: 'number_parking' %>
-
+											<%= form.label :number_parking %>
+											<%= form.text_field :number_parking, id: 'number_parking' %>
 										</div>
 										<div id="maximum-occupancy" class="corporateChanger col-md-4">
-                     <%= form.label :max_occupancy %>
-                      <%= form.text_field :max_occupancy, id: 'max_occupancy' %>
-				
+											<%= form.label :max_occupancy %>
+											<%= form.text_field :max_occupancy, id: 'max_occupancy' %>
 										</div>
 										<div id="business-hours" class="col-md-4">
-                     <%= form.label :business_hour %>
-                      <%= form.text_field :business_hour, id: 'business_hour' %>
-							
+											<%= form.label :business_hour %>
+											<%= form.text_field :business_hour, id: 'business_hour' %>
 										</div>
 									</div>
 								</fieldset>
@@ -137,15 +128,15 @@
 									<div class="row" style="margin-top: 100px;">
 										<div class="col-md-4" style="display: flex; flex-direction: column; align-items: center;">
 											<%= form.label :Standard %>
-                     					 <%= form.radio_button :elevator_type, 'standard' %>
+											<%= form.radio_button :elevator_type, 'standard' %>
 										</div>
 										<div class="col-md-4" style="display: flex; flex-direction: column; align-items: center;">
-													<%= form.label :Premium %>
-                     					 <%= form.radio_button :elevator_type, 'premium' %>
+											<%= form.label :Premium %>
+											<%= form.radio_button :elevator_type, 'premium' %>
 										</div>
 										<div class="col-md-4" style="display: flex; flex-direction: column; align-items: center;">
-										<%= form.label :Excelium %>
-                     					 <%= form.radio_button :elevator_type, 'excelium' %>
+											<%= form.label :Excelium %>
+											<%= form.radio_button :elevator_type, 'excelium' %>
 										</div>
 									</div>
 								</div>
@@ -155,30 +146,29 @@
 
 								<div id="quote" class="row" style="margin-top: 130px;">
 									<div id="elevator-amount" class="col-md-4" style="display: flex; flex-direction: column; align-items: center;">
-                      <%= form.label :ele_amount %>
-                      <%= form.text_field :ele_amount, id: 'ele_amount' %>
+										<%= form.label :ele_amount %>
+										<%= form.text_field :ele_amount, id: 'ele_amount' %>
 									</div>
 									<div id="elevator-unit-price" class="col-md-4" style="display: flex; flex-direction: column; align-items: center;">
-                       <%= form.label :ele_price_unit %>
-                      <%= form.text_field :ele_price_unit, id: 'ele_price_unit' %>
+										<%= form.label :ele_price_unit %>
+										<%= form.text_field :ele_price_unit, id: 'ele_price_unit' %>
 									</div>
 									<div id="elevator-total-price" class="col-md-4" style="display: flex; flex-direction: column; align-items: center;">
-                       <%= form.label :ele_total_price %>
-                      <%= form.text_field :ele_total_price, id: 'ele_total_price' %>
+										<%= form.label :ele_total_price %>
+										<%= form.text_field :ele_total_price, id: 'ele_total_price' %>
 									</div>
 									<div id="installation-fees" class="col-md-4" style="display: flex; flex-direction: column; align-items: center;">
-                      <%= form.label :inst_fee %>
-                      <%= form.text_field :inst_fee, id: 'inst_fee' %>
+										<%= form.label :inst_fee %>
+										<%= form.text_field :inst_fee, id: 'inst_fee' %>
 									</div>
 									<div id="final-price" class="col-md-4" style="display: flex; flex-direction: column; align-items: center;">
-                        <%= form.label :final_price %>
-                      <%= form.text_field :final_price, id: 'final_price' %>
+										<%= form.label :final_price %>
+										<%= form.text_field :final_price, id: 'final_price' %>
 									</div>
 									<div class="actions">
-                    <%= form.submit %>
-                  </div>
+										<%= form.submit %>
+									</div>
 								</div>
-				
 						</div>
 		</div>
 </div>
