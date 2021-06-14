@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
     skip_before_action :authenticate_user!, :only => [:home]
     skip_before_action :authenticate_user!, :only => [:residential]
     skip_before_action :authenticate_user!, :only => [:commercial]
-    skip_before_action :authenticate_user!, :only => [:quote]
+    skip_before_action :authenticate_user!, :only => [:quotes]
     protected
 
     #load_and_authorize_resource
